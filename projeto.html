@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Bartender</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="icon" href="imgs\logo.png" type="image/png">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+      background-color: #f8f9fa;
+      margin: 0;
+    }
+
+    header {
+      background-color: black;
+      height: 100px; /* Altura padrão para telas maiores */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    header.hidden {
+      opacity: 0;
+    }
+
+    header img {  
+      max-width: 150px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 767px) {
+    .background-section p {
+      margin: 3px 0; /* Espaço acima do parágrafo */
+      font-size: 12px;
+    }
+
+}
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 90px;
+      z-index: 1000;
+      transition: top 0.5s ease-in-out;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff0;
+    }
+    
+    @media screen and (max-width: 767px) {
+    nav {
+      font-size: 12px;
+    }
+}
+
+    .containerfooter{
+     
+     max-width: 1170px;
+     margin:auto;
+   }
+   .rowfooter{
+     display: flex;
+     flex-wrap: wrap;
+   }
+   ul{
+    margin-left: -40px;
+     list-style: none;
+   }
+   .footer{
+     margin-top: 150px;
+     background-color: #24262b;
+       padding: 70px 0;
+   }
+   .footer-col{
+      width: 25%;
+      padding: 0 15px;
+   }
+   .footer-col h4{
+     font-size: 18px;
+     color: #ffffff;
+     text-transform: capitalize;
+     margin-bottom: 35px;
+     font-weight: 500;
+     position: relative;
+   }
+   .footer-col h4::before{
+     content: '';
+     position: absolute;
+     left:0;
+     bottom: -10px;
+     background-color: #e91e63;
+     height: 2px;
+     box-sizing: border-box;
+     width: 50px;
+   }
+   .footer-col ul li:not(:last-child){
+     margin-bottom: 10px;
+   }
+   .footer-col ul li a{
+     font-size: 16px;
+     text-transform: capitalize;
+     color: #ffffff;
+     text-decoration: none;
+     font-weight: 300;
+     color: #bbbbbb;
+     display: block;
+     transition: all 0.3s ease;
+   }
+   .footer-col ul li a:hover{
+     color: #ffffff;
+     padding-left: 8px;
+   }
+   .footer-col .social-links a{
+     display: inline-block;
+     height: 40px;
+     width: 40px;
+     background-color: rgba(255,255,255,0.2);
+     margin:0 10px 10px 0;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all 0.5s ease;
+   }
+   .footer-col .social-links a:hover{
+     color: #24262b;
+     background-color: #ffffff;
+   }
+   
+   .footer p {
+     color: white;
+     font-weight: bold;
+   }
+   
+   /*responsive*/
+   @media(max-width: 767px){
+     .footer-col{
+       width: 50%;
+       margin-bottom: 30px;
+   }
+   }
+   @media(max-width: 574px){
+     .footer-col{
+       width: 100%;
+   }
+   }
+    .section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: black;
+      cursor: pointer;
+      margin-bottom: 10px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 25px;
+      font-family: "Playfair Display";
+      letter-spacing: 5px;  
+    }
+
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      
+    }
+
+    h2.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .description {
+      color: #555;
+      display: none;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .slider {
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .slick-prev, .slick-next {
+      font-size: 24px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+
+    section div {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
+    }
+
+    section p {
+      margin: 20px 0; /* Espaço acima do parágrafo */
+    }
+
+    section.background-section {
+      background-image: url("./imgs/banner1.jpg"); /* Substitua pelo caminho real da sua imagem de fundo */
+      background-size: cover;
+      height: 75vh; /* Defina a altura da seção como 100% da altura da janela */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff; /* Cor do texto, ajuste conforme necessário */
+      position: relative;
+      z-index: 1;
+    } /* Adiciona posição relativa à seção para posicionar elementos filhos */
+      
+    
+
+    section.background-section h1 {
+      position: absolute; /* Adiciona posicionamento absoluto */
+      top: 24%; /* Move o elemento para o centro vertical */
+      left: 50%; /* Move o elemento para o centro horizontal */
+      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
+      color: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(1rem, 5vw, 5rem);
+      font-family: "Cormorant Garamond", serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+      letter-spacing: 5px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px; /* Largura do scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Cor do fundo do scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #888; /* Cor do botão de rolagem */
+      border-radius: 6px; /* Cantos arredondados do botão de rolagem */
+      border: 3px solid #f1f1f1; /* Borda do botão de rolagem */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555; /* Cor do botão de rolagem ao passar o mouse */
+    }
+
+    .team-container {
+      text-align: center;
+      padding: 20px;
+      margin-top: 100px;
+    }
+
+    .team-title {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: black;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 5px;
+    }
+
+    .team-member {
+      position: relative;
+      display: inline-block;
+      width: 40%;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px 50px; /* Ajustado para 10px superior/inferior e 50px à esquerda/direita */
+      overflow: hidden;
+      transition: filter 0.3s; /* Adiciona transição para suavizar o efeito */
+    }
+
+    .team-member:hover {
+      filter: brightness(80%); /* Escurece a imagem ao passar o mouse */
+    }
+
+    .team-member img {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .member-info {
+      padding: 15px;
+    }
+
+    .member-name {
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .member-role {
+      font-size: 1em;
+      color: #777;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: -40px; /* Mova os ícones para fora da equipe */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0; /* Inicialmente invisível */
+      transition: opacity 0.3s, bottom 0.3s; /* Adiciona transição para suavizar o efeito */
+    }
+
+    .team-member:hover .social-icons {
+      opacity: 1; /* Torna visível ao passar o mouse */
+      bottom: 150px; /* Move para cima */
+    }
+
+    .social-icons a {
+      color: #fff; /* Cor dos ícones */
+      font-size: 1.5em;
+      margin: 5px;
+      text-decoration: none;
+      opacity: 0; /* Inicialmente invisível */
+      transition: opacity 0.3s; /* Adiciona transição para suavizar o efeito */
+    }
+
+    .team-member:hover .social-icons a {
+      opacity: 1; /* Torna visível ao passar o mouse */
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <header>
+    <img src="./imgs/logo.png" onclick="window.location.href='index.html'" alt="Logo">
+  </header>
+
+  <nav>
+    <a href="./index.html"><i class="fa fa-home"></i> Inicio</a>
+    <a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a>
+    <a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a>
+    <a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a>
+    <a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a>
+  </nav>
+
+  <section class="background-section">
+    <h1>Projeto</h1>
+    <div>
+    <p>
+      Esta página tem como objetivo apresentar os materiais, passos e componentes utilizados na criação do Smart Bartender. Explore as seções abaixo para obter detalhes sobre a construção e os elementos que compõem este inovador sistema de bartender automatizado.
+  </p>
+</div>
+  </section>
+
+<div class="team-container" id="equipa">
+    <div class="team-title">Equipa</div>
+    <div class="team-member">
+      <img src="./imgs/testava.png" alt="Membro 1">
+      <div class="member-info">
+        <div class="member-name">Ricardo Barata</div>
+        <div class="member-role">Web Designer</div>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="team-member">
+      <img src="./imgs/testava.png" alt="Membro 2">
+      <div class="member-info">
+        <div class="member-name">Dinis Leal</div>
+        <div class="member-role">Programador</div>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr>
+
+  <div class="section w3-content" id="section1">
+    <h2 style="margin-top: 50px" onclick="toggleSection('section1')" class="open">Construção da Estrutura <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Corte quatro peças de madeira de 1 por 2 nas seguintes dimensões: 4x de 16", 4x de 9", 6x de 7,5".<br>
+        Parafuse duas peças de 16" e duas de 7,5" para formar cada lado da estrutura.<br>
+        Conecte os lados com peças de 9" para a parte superior e inferior.<br>
+    </p>
+    <div class="slider">
+      <img src="./imgs/1.png" alt="Image 1" style="margin-top: 70px;">
+      <img src="./imgs/2.png" alt="Image 2">
+      <img src="./imgs/3.png" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section12">
+    <h2 onclick="toggleSection('section12')" class="open">Materiais <span class="arrow">&#9660;</span></h2>
+
+    <div class="table-container" style="display: none;"> <!-- Adicionei esta div com a classe table-container -->
+      <table class="w3-table w3-striped w3-bordered w3-border">
+              <tr>
+                <th>Componente</th>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+              </tr>
+              <!-- Linha 1 da tabela -->
+              <tr>
+                <td>Arduino</td>
+                <td>Placa de desenvolvimento</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 2 da tabela -->
+              <tr>
+                <td>Raspberry Pi</td>
+                <td>Microcomputador</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 3 da tabela -->
+              <tr>
+                <td>Momentary Push Button Switch</td>
+                <td>Interruptor momentâneo</td>
+                <td>2</td>
+              </tr>
+              <!-- Linha 4 da tabela -->
+              <tr>
+                <td>PVC Project Board</td>
+                <td>Placa de projeto em PVC</td>
+                <td>2</td>
+              </tr>
+              <!-- Linha 5 da tabela -->
+              <tr>
+                <td>8 Channel Relay</td>
+                <td>Relé de 8 canais</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 6 da tabela -->
+              <tr>
+                <td>12V Switching Power Supply</td>
+                <td>Fonte de alimentação comutada de 12V</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 7 da tabela -->
+              <tr>
+                <td>Power Cable</td>
+                <td>Cabo de alimentação</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 8 da tabela -->
+              <tr>
+                <td>5V Regulator</td>
+                <td>Regulador de 5V</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 9 da tabela -->
+              <tr>
+                <td>Power Distribution Board</td>
+                <td>Placa de distribuição de energia</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 10 da tabela -->
+              <tr>
+                <td>Peristaltic Pump</td>
+                <td>Bomba peristáltica</td>
+                <td>6</td>
+              </tr>
+              <!-- Linha 11 da tabela -->
+              <tr>
+                <td>Food Grade Silicone Tubing 2mm Inner Diameter</td>
+                <td>Mangueira de silicone grau alimentício, diâmetro interno de 2mm</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 12 da tabela -->
+              <tr>
+                <td>LED Strip</td>
+                <td>Faixa de LED</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 13 da tabela -->
+              <tr>
+                <td>Kitchen Funnel</td>
+                <td>Funil de cozinha</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 14 da tabela -->
+              <tr>
+                <td>Red Pepper Hat</td>
+                <td>Chapéu de pimentão vermelho</td>
+                <td>3</td>
+              </tr>
+              <!-- Linha 15 da tabela -->
+              <tr>
+                <td>OLED Display</td>
+                <td>Display OLED</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 16 da tabela -->
+              <tr>
+                <td>1N4007 – High Voltage, High Current Rated Diode</td>
+                <td>Diodo classificado para alta voltagem e alta corrente</td>
+                <td>6</td>
+              </tr>
+              <!-- Linha 17 da tabela -->
+              <tr>
+                <td>Jumper wires (generic)</td>
+                <td>Fios jumper (genérico)</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 18 da tabela -->
+              <tr>
+                <td>3mm Outdoor Mounting Tape</td>
+                <td>Fita de montagem externa de 3mm</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 19 da tabela -->
+              <tr>
+                <td>Wood Screws</td>
+                <td>Parafusos de madeira</td>
+                <td>1</td>
+              </tr>
+              <!-- Linha 20 da tabela -->
+              <tr>
+                <td>M2.5 Screws</td>
+                <td>Parafusos M2.5</td>
+                <td>4</td>
+              </tr>
+      </table>
+      
+      <div class="slider" style="margin-top: 20px;">
+        <img src="./imgs/1.png" alt="Image 1" style="margin-top: 70px;">
+        <img src="./imgs/2.png" alt="Image 2">
+        <img src="./imgs/3.png" alt="Image 3">
+        <img src="./imgs/4.png" alt="Image 4">
+        <img src="./imgs/5.png" alt="Image 5">
+        <img src="./imgs/6.png" alt="Image 6">
+        <img src="./imgs/7.png" alt="Image 7">
+        <img src="./imgs/8.png" alt="Image 8">
+        <img src="./imgs/9.png" alt="Image 9">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section w3-content" id="section2">
+    <h2 onclick="toggleSection('section2')" class="open">Plataformas para Bebida e Eletrônicos <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+            Use placas de fibra de densidade média (MDF) para criar plataformas para a bebida e eletrônicos.<br>
+            Corte as placas nas dimensões: Plataforma para a bebida (12" x 9") e Plataforma para eletrônicos (11-7/8" x 7-3/8").<br>
+            Faça recortes nas extremidades da plataforma da bebida para acomodar os suportes da estrutura.
+    </p>
+    <div class="slider">
+        <img src="./imgs/4.png" alt="Image 1" style="margin-top: 20px;">
+        <img src="./imgs/5.png" alt="Image 2">
+        <img src="./imgs/6.png" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section3">
+    <h2 onclick="toggleSection('section3')" class="open">Painéis para o Bartender<span class="arrow">&#9660;</span></h2>
+    <p class="description">
+            Utilize folhas de PVC preto para criar painéis frontal, lateral esquerdo, lateral direito, acesso, superior, traseiro e internos.<br>
+            Faça um recorte na parte frontal para a janela por onde a bebida será inserida.<br>
+            Deixe o restante da estrutura aberto para a instalação de componentes antes do fechamento.
+    </p>
+    <div class="slider">
+        <img src="./imgs/7.png" alt="Image 1">
+        <img src="./imgs/8.png" alt="Image 2">
+        <img src="./imgs/9.png" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section4">
+    <h2 onclick="toggleSection('section4')" class="open">Montagem do Funil<span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Imprima em 3D um suporte para o funil da bebida.<br>
+        Parafuse o suporte na parte superior da estrutura e encaixe o funil.
+    </p>
+    <div class="slider">
+        <img src="./imgs/10.png" alt="Image 1">
+        <img src="./imgs/11.png" alt="Image 2">
+        <img src="./imgs/12.png" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section5">
+    <h2 onclick="toggleSection('section5')" class="open">Montagem e Fiação dos Eletrônicos <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Fixe os componentes eletrônicos na plataforma usando fita adesiva dupla-face.<br>
+        Siga o diagrama de circuito para a conexão dos componentes.<br>
+        Faça furos para passagem dos fios dos motores das bombas e do cabo de alimentação.
+    </p>
+    <div class="slider">
+        <img src="./imgs/13.png" alt="Image 1">
+        <img src="./imgs/14.png" alt="Image 2">
+        <img src="./imgs/15.png" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section6">
+    <h2 onclick="toggleSection('section6')" class="open">Instalação das Luzes de LED  <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Cole uma fita de LED ao redor da estrutura para adicionar efeito visual.<br>
+        Rote os fios entre os painéis externo e interno.
+    </p>
+    <div class="slider">
+        <img src="./imgs/31.png" alt="Image 1">
+        <img src="./imgs/17.png" alt="Image 2">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section7">
+    <h2 onclick="toggleSection('section7')" class="open">Instalação do Coletor e Tubulação <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Imprima em 3D um coletor para unir as tubulações das bombas.<br>
+        Faça furos no painel superior para passagem das tubulações.<br>
+        Parafuse o coletor na parte traseira da estrutura.
+    </p>
+    <div class="slider">
+        <img src="./imgs/18.png" alt="Image 1" style="margin-top: 70px;">
+        <img src="./imgs/21.png" alt="Image 2" style="margin-top: 70px;">
+        <img src="./imgs/22.png" alt="Image 3">
+        <img src="./imgs/23.png" alt="Image 4">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section8">
+    <h2 onclick="toggleSection('section8')" class="open">Tela <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Crie uma abertura retangular no painel frontal para a tela e fure os pontos de montagem.<br>
+        Fixe a tela com parafusos e instale botões nos furos laterais.<br>
+        Adicione um contorno impresso em 3D ao redor da tela.
+    </p>
+    <div class="slider">
+        <img src="./imgs/24.png" alt="Image 1">
+        <img src="./imgs/25.png" alt="Image 2">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section9">
+    <h2 onclick="toggleSection('section9')" class="open">Fiação das Bombas <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Solde fios de energia aos terminais das bombas e adicione diodos para evitar corrente residual.<br>
+        Organize os fios com fita elétrica para uma aparência mais limpa.
+    </p>
+    <div class="slider">
+        <img src="./imgs/26.png" alt="Image 1">
+        <img src="./imgs/27.png" alt="Image 2">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section10">
+    <h2 onclick="toggleSection('section10')" class="open">Suporte para Copo  <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Adicione um suporte para copo, pressionando os encaixes nos furos da plataforma da bebida.
+    </p>
+    <div class="slider">
+        <img src="./imgs/28.png" alt="Image 1">
+        <img src="./imgs/29.png" alt="Image 2" style="margin-top: 30px;">
+        <img src="./imgs/30.png" alt="Image 3" style="margin-top: 50px;">
+    </div>
+  </div>
+
+  <div class="section w3-content" id="section11">
+    <h2 onclick="toggleSection('section11')" class="open">Software  <span class="arrow">&#9660;</span></h2>
+    <p class="description">
+        Consulte a página do Github para instruções sobre como configurar o software no Raspberry Pi.
+    </p>
+    <div class="software-buttons" style="display: none; text-align: center; margin-top: 50px;"  > <!-- Adicionamos o estilo display: none; para ocultar inicialmente os botões -->
+      <button style="padding: 10px 20px; font-size: 16px; background-color: orange; color: white; border: none; border-radius: 5px ; cursor: pointer;" onclick="redirectToGitHub()">GitHub</button>
+        <button style="margin-right: 20px; padding: 10px 20px; font-size: 16px; background-color: orange; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="downloadReport()">Relatório</button>
+    </div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="containerfooter">
+    <div class="rowfooter">
+      <div class="footer-col">
+        <h4>Sobre o Smart Bartender</h4>
+        <ul>
+          <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
+          <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
+          <li><a href="projeto.html#equipa">Nossa equipa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="projeto.html#section1">Guia de Montagem</a></li>
+          <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
+          <li><a href="contactos.html">Opções de Apoio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos Avançados</h4>
+        <ul>
+          <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
+          <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
+          <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
+      </ul>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Siga-nos</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+          <p>2024 Smart Bartender</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Scripts -->
+
+
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script>
+
+    $(document).ready(function () {
+      var header = $('header');
+      var nav = $('nav');
+      var distance = 50;
+
+      $(window).scroll(function () {
+        var currentScrollTop = $(window).scrollTop();
+
+        if (currentScrollTop > distance) {
+          header.addClass('hidden');
+          nav.css({ top: '0' });
+        } else {
+          header.removeClass('hidden');
+          nav.css({ top: '90px' });
+        }
+      });
+
+    });
+
+      function toggleSection(sectionId) {
+          var section = $('#' + sectionId);
+          var description = section.find('.description');
+          var slider = section.find('.slider');
+          var tableContainer = section.find('.table-container');
+          var softwareButtons = section.find('.software-buttons');
+  
+          description.slideToggle();
+          slider.slideToggle();
+          tableContainer.slideToggle();
+          softwareButtons.slideToggle(); // Mostrar ou ocultar os botões com base no estado da seção
+          section.find('h2').toggleClass('open');
+  
+          if (slider.is(':visible')) {
+              slider.slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true,
+                  infinite: true,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  prevArrow: '<button type="button" class="slick-prev"></button>',
+                  nextArrow: '<button type="button" class="slick-next"></button>',
+              });
+          } else {
+              slider.slick('unslick');
+          }
+      }
+  
+      function redirectToGitHub() {
+          window.location.href = 'https://github.com/dinisleal8/smartbartender2';
+      }
+  
+      function downloadReport() {
+          var reportContent = 'Este é o conteúdo do seu relatório.';
+          var blob = new Blob([reportContent], { type: 'text/plain' });
+          var link = document.createElement('a');
+  
+          link.href = window.URL.createObjectURL(blob);
+          link.download = 'relatorio.txt';
+          link.click();
+      }
+
+      // Adiciona um evento quando a página termina de carregar
+      document.addEventListener('DOMContentLoaded', function () {
+        // Inicializa o ScrollReveal
+        ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('h2', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('.team-container', { duration: 1000, origin: 'bottom', distance: '20px' });
+        // Define a opacidade para 1 após o carregamento da página
+        document.body.style.opacity = 1;
+      });
+    </script>
+</body>
+</html>
