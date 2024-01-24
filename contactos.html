@@ -85,11 +85,10 @@
 
     }
     .wrapper h1{
-      font-size: 22px;
-      font-weight: 600;
-      padding: 20px 30px;
+      text-align: center;
       font-family: "Playfair Display";
       letter-spacing: 5px;
+      font-size: 32px;
     }
     .wrapper form{
       margin: 35px 30px;
@@ -362,6 +361,12 @@ ul{
       margin-bottom: 50px;
       margin: auto;
     }
+    #iframe-container h1 {
+      font-family: Playfair Display;
+      letter-spacing: 5px;
+      text-align: center;
+      font-size: 32px;
+    }
 
     iframe {
       width: 100%;
@@ -372,7 +377,7 @@ ul{
     .circle-container {
   margin-top: 100px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 150px;
 }
@@ -611,7 +616,7 @@ font-size: 12px;
       </div>
       <div class="dbl-field">
         <div class="field">
-          <input type="text" name="phone" placeholder="Telefone">
+          <input type="tel" name="phone" placeholder="Telefone">
           <i class='fas fa-phone-alt'></i>
         </div>
         <div class="field">
@@ -670,7 +675,8 @@ font-size: 12px;
 
 
   <div id="iframe-container">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1rZr5KdvXXCZc19Cz0BkDCq-9TRc&hl=en_US&ehbc=2E312F" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h1>Encontre-nos</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.1809786828057!2d-8.745705724153579!3d40.00440487150876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd224163d83775f9%3A0x70d18987742b6cc1!2sInstituto%20D.Jo%C3%A3o%20V!5e0!3m2!1spt-PT!2spt!4v1705927549944!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
 </div>

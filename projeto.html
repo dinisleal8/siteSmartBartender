@@ -299,82 +299,109 @@
     }
 
     .team-container {
-      text-align: center;
-      padding: 20px;
-      margin-top: 100px;
-    }
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+}
 
-    .team-title {
+.team-title {
       font-size: 1.5em;
-      margin-bottom: 20px;
       color: black;
       font-family: "Cormorant Garamond", serif;
       letter-spacing: 5px;
+      text-align: center;
+      margin-top: 100px;
     }
 
-    .team-member {
-      position: relative;
-      display: inline-block;
-      width: 40%;
-      max-width: 300px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 10px 50px; /* Ajustado para 10px superior/inferior e 50px à esquerda/direita */
-      overflow: hidden;
-      transition: filter 0.3s; /* Adiciona transição para suavizar o efeito */
-    }
 
-    .team-member:hover {
-      filter: brightness(80%); /* Escurece a imagem ao passar o mouse */
-    }
+.team-member {
+  width: 80%; /* Ajuste a largura conforme necessário para dispositivos móveis */
+  max-width: 300px;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px; /* Ajuste a margem conforme necessário */
+  overflow: hidden;
+  transition: filter 0.3s;
+}
 
-    .team-member img {
-      width: 100%;
-      border-bottom: 1px solid #ddd;
-    }
+.team-member:hover {
+  filter: brightness(80%);
+}
 
-    .member-info {
-      padding: 15px;
-    }
+.team-member img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
 
-    .member-name {
-      font-size: 1.2em;
-      margin-bottom: 8px;
-      color: #333;
-    }
+.member-info {
+  padding: 15px;
+}
 
-    .member-role {
-      font-size: 1em;
-      color: #777;
-    }
+.member-name {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #333;
+}
 
-    .social-icons {
-      position: absolute;
-      bottom: -40px; /* Mova os ícones para fora da equipe */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0; /* Inicialmente invisível */
-      transition: opacity 0.3s, bottom 0.3s; /* Adiciona transição para suavizar o efeito */
-    }
+.member-role {
+  font-size: 1em;
+  color: #777;
+}
 
-    .team-member:hover .social-icons {
-      opacity: 1; /* Torna visível ao passar o mouse */
-      bottom: 150px; /* Move para cima */
-    }
+.social-icons {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+}
 
-    .social-icons a {
-      color: #fff; /* Cor dos ícones */
-      font-size: 1.5em;
-      margin: 5px;
-      text-decoration: none;
-      opacity: 0; /* Inicialmente invisível */
-      transition: opacity 0.3s; /* Adiciona transição para suavizar o efeito */
-    }
+.team-member:hover .social-icons {
+  opacity: 1;
+  bottom: 120px;
+}
 
-    .team-member:hover .social-icons a {
-      opacity: 1; /* Torna visível ao passar o mouse */
-    }
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 5px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.team-member:hover .social-icons a {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+  }
+
+  .team-member {
+    width: 100%;
+    margin: 15px; /* Ajuste a margem para dispositivos móveis */
+  }
+
+.social-icons a {
+  font-size: 1.35em;
+}
+
+
+}
+
 
   </style>
 
@@ -401,18 +428,18 @@
   </p>
 </div>
   </section>
-
+  <div class="team-title">Equipa</div>
 <div class="team-container" id="equipa">
-    <div class="team-title">Equipa</div>
+    
     <div class="team-member">
       <img src="./imgs/testava.png" alt="Membro 1">
       <div class="member-info">
         <div class="member-name">Ricardo Barata</div>
         <div class="member-role">Web Designer</div>
         <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-envelope"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
     </div>
@@ -423,9 +450,9 @@
         <div class="member-name">Dinis Leal</div>
         <div class="member-role">Programador</div>
         <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-envelope"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
     </div>
