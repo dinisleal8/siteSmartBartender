@@ -401,80 +401,7 @@ ul{
       border: 0;
     }
     
-    .circle-container {
-  margin-top: 100px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 150px;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 0 20px;
-  text-align: center;
-  align-items: center;
-  color: #fff;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  background: radial-gradient(circle, #3498db, #2980b9);
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-}
-
-.circle i {
-  font-size: 36px;
-  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
-  margin-bottom: 10px;
-}
-
-.circle:hover {
-  transform: scale(1.05);
-  transform: scale(1.1) rotate(5deg);
-}
-
-.circle:hover i {
-  transform: rotate(360deg);
-  color: #fff; /* Ajuste a cor desejada ao passar o mouse */
-}
-
-.circle span {
-  display: block;
-  font-size: 18px;
-  margin-top: 5px;
-  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-
-.circle:hover span {
-  opacity: 0.8;
-  color: #fff; /* Ajuste a cor desejada ao passar o mouse */
-}
-
 @media (max-width: 767px) {
-  .circle {
-    width: 120px;
-    height: 120px;
-  }
-  .circle-container{
-    flex-wrap: nowrap;
-    gap: 0px;
-  }
-  .circle i {
-font-size: 20px;
-  }
-  .circle span {
-font-size: 12px;
-  }
   #iframe-container {
     width: 80%;
     margin: auto;
@@ -594,6 +521,95 @@ font-size: 12px;
     }
 }
 
+
+
+
+.contact-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+   gap: 70px;
+}
+
+.card{
+    position: relative;
+    flex: 1;
+    max-width: 210px;
+    height: 210px;
+    background: radial-gradient(circle, #3498db, #2980b9);
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    
+}
+
+.icon{
+    font-size: 32px;
+    color: white;
+    transition: .3s linear;
+}
+
+.card:hover .icon{
+    transform: scale(4);
+    opacity: 0;
+}
+
+.card-content h3,
+.card-content span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+}
+
+.card-content h3{
+    top: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.card-content span{
+    bottom: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.card:hover h3{
+    opacity: 1;
+    top: 46px;
+    transition: .3s linear .3s;
+}
+
+.card:hover span{
+    opacity: 1;
+    bottom: 46px;
+    transition: .3s linear .3s;
+}
+
+
+@media screen and (max-width:900px){
+    .card{
+        flex: 100%;
+        max-width: 500px;
+        border-radius: 0%;
+    }
+    .contact-info{
+        gap: 0px;
+}
+}
+
+
   </style>
 
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -621,20 +637,38 @@ font-size: 12px;
     </div>
   </div>
 
-  <div class="circle-container">
-    <a href="tel:+969696969" class="circle">
-      <i class="fa fa-phone"></i>
-      <span>998189181</span>
-    </a>
-    <a href="https://www.google.com/maps/place/Louriçal" class="circle">
-      <i class="fa fa-map-marker"></i>
-      <span>IDJV, Louriçal</span>
-    </a>
-    <a href="mailto:geral@smartbartender.com" class="circle">
-      <i class="fa fa-envelope"></i>
-      <span>Email</span>
-    </a>
+  <div class="contact-info">
+    <div class="card">
+      <a href="mailto:geral@smartbar.com">
+        <i class="icon fas fa-envelope"></i>
+        <div class="card-content">
+          <h3>Email</h3>
+          <span>geral@smartbar.com</span>
+        </div>
+      </a>
+    </div>
+  
+    <div class="card">
+      <a href="tel:+00000000000">
+        <i class="icon fas fa-phone"></i>
+        <div class="card-content">
+          <h3>Telefone</h3>
+          <span>+00000000000</span>
+        </div>
+      </a>
+    </div>
+  
+    <div class="card">
+      <a href="https://www.google.com/maps?q=Louriçal">
+        <i class="icon fas fa-map-marker-alt"></i>
+        <div class="card-content">
+          <h3>Localização</h3>
+          <span>Louriçal</span>
+        </div>
+      </a>
+    </div>
   </div>
+  
   
   
   <div class="wrapper">
