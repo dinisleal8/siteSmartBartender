@@ -29,47 +29,50 @@
     
 
     header {
-      background-color: black;
-      height: 100px; /* Altura padrão para telas maiores */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.5s ease-in-out;
-    }
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
 
-    header.hidden {
-      opacity: 0;
-    }
+.logoheader {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer;
+}
 
-    header img {  
-      max-width: 150px;
-      cursor: pointer;
-    }
-
-    nav {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 90px; /* Ajusta o espaço entre o header e o navbar */
-      z-index: 1000;
-      transition: top 0.5s ease-in-out;
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    transition: top 0.5s ease-in-out;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      margin: 0 10px;
-      transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
-    }
+      z-index: 2;
+}
 
-    nav a:hover {
-      color: #ff0; /* Cor ao passar o mouse */
-    }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+nav ul li {
+    margin: 0 10px; /* Adiciona margem horizontal entre os itens */
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 11px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ff0; /* Cor ao passar o mouse */
+}
 
     
     .cabeçalho {
@@ -92,7 +95,7 @@
       width: 100%;
       height: auto;
       object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
-      margin-top: -10px; /* Ajusta a margem superior para mover a imagem para baixo */
+      
     }
 
     .cabeçalho h1 {
@@ -119,7 +122,7 @@
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
-      margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
+      
     }
 
     .cabeçalho p {
@@ -330,7 +333,7 @@
 
     .intro {
       position: fixed;
-      z-index: 1;
+      z-index: 3;
       left: 0;
       top: 0;
       width: 100%;
@@ -403,14 +406,14 @@
     #bout {
       width: 80%;
     }
+
     nav {
-      display: flex;
-      padding: 0px;
       text-align: center;
       justify-content: center;
       align-items: center;
       font-size: 12px;
     }
+    
     .cabeçalho p {
       margin: 3px 0; /* Espaço acima do parágrafo */
       font-size: 12px;
@@ -443,17 +446,21 @@
         </h1> 
       </div> 
 
-  <header>
-    <img src="./imgs/logo.png" onclick="window.location.href='index.html'" alt="Logo"> <!-- Substitua pelo caminho real do seu logotipo -->
-  </header>
 
-  <nav>
-    <a href="./index.html"><i class="fa fa-home"></i> Inicio</a>
-    <a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a>
-    <a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a>
-    <a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a>
-    <a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a>
-  </nav>
+
+      <header>
+        <img src="c:\Users\Ricardo Barata\Desktop\siteSmartBartender-main\imgs\logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logoheader">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
+            <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
+            <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
+            <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
+            <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
+        </ul>
+    </nav>
+
 
   <div class="cabeçalho">
     <img src="./imgs/fundo4.jpg" alt="SBartender">
@@ -556,23 +563,13 @@
     <script>
     // jQuery para esconder o header e o nav inicialmente
     $(document).ready(function () {
-      var header = $('header');
-      var nav = $('nav');
+  // Código específico para a animação do logo e a introdução
+});
 
-      header.css({ display: 'none' });
-      nav.css({ display: 'none' });
-    });
-
-    let intro = document.querySelector(".intro");
+let intro = document.querySelector(".intro");
 let logoSpan = document.querySelectorAll(".logo");
-let header = document.querySelector("header");
-let nav = document.querySelector("nav");
-var distance = 50;
 
-// Esconde o header e o nav instantaneamente
-header.style.display = "none";
-nav.style.display = "none";
-
+// Esconde o header e o nav instantaneamente removido
 
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -596,29 +593,6 @@ window.addEventListener("DOMContentLoaded", () => {
     // Move a introdução para cima para fora da tela
     setTimeout(() => {
       intro.style.top = "-100vh";
-
-      // Mostra o header após um intervalo mais curto
-      header.style.display = '';
-
-      // Mostra o nav após um intervalo maior
-      setTimeout(() => {
-        nav.style.display = '';
-      }, 600);
-
-      // Adiciona um ouvinte de evento de rolagem para manipular o navbar e header
-      window.addEventListener("scroll", function () {
-        var currentScrollTop = window.scrollY;
-
-        if (currentScrollTop > distance) {
-          // Scrolling down
-          header.style.opacity = "0";
-          nav.style.top = "0";
-        } else {
-          // Scrolling up
-          header.style.opacity = "1";
-          nav.style.top = "90px"; // Ajuste conforme necessário
-        }
-      });
     }, 2300);
   });
 });
