@@ -27,49 +27,55 @@
     }
     
     header {
-      background-color: black;
-      height: 100px; /* Altura padrão para telas maiores */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.5s ease-in-out;
-    }
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
 
-    header.hidden {
-      opacity: 0;
-    }
+.logo {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
 
-    header img {  
-      max-width: 150px;
-      cursor: pointer;
-    }
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
 
-    nav {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 90px; /* Ajusta o espaço entre o header e o navbar */
-      z-index: 1000;
-      transition: top 0.5s ease-in-out;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      margin: 0 10px;
-      transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    
+}
 
-    nav a:hover {
-      color: #ff0; /* Cor ao passar o mouse */
-    }
+nav ul li {
+    float: left;
+   
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ff0; /* Cor ao passar o mouse */
+}
 
     @media screen and (max-width: 767px) {
-      nav {
+    nav {
       display: flex;
       padding: 0px;
       text-align: center;
@@ -313,7 +319,45 @@ ul{
     width: 100%;
 }
 }
-    section div {
+.cabeçalho {
+      position: relative; /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden; /* Remove as bordas brancas da imagem */
+      text-align: center; /* Centraliza o texto horizontalmente */
+      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .cabeçalho img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
+      margin-top: -10px; /* Ajusta a margem superior para mover a imagem para baixo */
+    }
+
+    .cabeçalho h1 {
+      position: absolute; /* Adiciona posicionamento absoluto */
+      top: 35%; /* Move o elemento para o centro vertical */
+      left: 30%; /* Move o elemento para o centro horizontal */
+      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
+      color: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(1rem, 5vw, 5rem);
+      font-family: "Cormorant Garamond", serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+      letter-spacing: 5px;
+      text-align: left;
+    }
+
+    .cabeçalho div {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -325,37 +369,8 @@ ul{
       margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
     }
 
-    section p {
+    .cabeçalho p {
       margin: 20px 0; /* Espaço acima do parágrafo */
-    }
-
-    section.background-section {
-      background-image: url("./imgs/contactos.jpg"); /* Substitua pelo caminho real da sua imagem de fundo */
-      background-size: cover;
-      height: 75vh; /* Defina a altura da seção como 100% da altura da janela */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff; /* Cor do texto, ajuste conforme necessário */
-      position: relative;
-      z-index: 1;
-    } /* Adiciona posição relativa à seção para posicionar elementos filhos */
-      
-    
-
-    section.background-section h1 {
-      position: absolute; /* Adiciona posicionamento absoluto */
-      top: 24%; /* Move o elemento para o centro vertical */
-      left: 50%; /* Move o elemento para o centro horizontal */
-      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
-      color: #fff;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: clamp(1rem, 5vw, 5rem);
-      font-family: "Cormorant Garamond", serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
-      letter-spacing: 5px;
     }
 
     #iframe-container {
@@ -570,25 +585,25 @@ font-size: 12px;
 
 <body>
   <header>
-    <img src="./imgs/logo.png" onclick="window.location.href='index.html'" alt="Logo"> <!-- Substitua pelo caminho real do seu logotipo -->
+    <img src="c:\Users\Ricardo Barata\Desktop\siteSmartBartender-main\imgs\logoheader.png" alt="Logo" class="logo">
   </header>
-
   <nav>
-    <a href="./index.html"><i class="fa fa-home"></i> Inicio</a>
-    <a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a>
-    <a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a>
-    <a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a>
-    <a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a>
+    <ul>
+        <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
+        <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
+        <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
+        <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
+    </ul>
   </nav>
   
-  <section class="background-section">
+  <div class="cabeçalho">
+    <img src="./imgs/contactos.jpg" alt="SBartender">
     <h1>Contactos</h1>
     <div>
-    <p>
-      Entre em contato conosco para descobrir mais sobre nossos serviços. Sua satisfação é a nossa prioridade, e mal podemos esperar para atendê-lo. Vamos transformar seus eventos em experiências memoráveis juntos!
-  </p>
-</div>
-  </section>
+      <p>Entre em contato conosco para descobrir mais sobre nossos serviços. Sua satisfação é a nossa prioridade, e mal podemos esperar para atendê-lo. Vamos transformar seus eventos em experiências memoráveis juntos!</p>
+    </div>
+  </div>
 
   <div class="circle-container">
     <a href="tel:+969696969" class="circle">
@@ -733,30 +748,7 @@ font-size: 12px;
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-
-
-    $(document).ready(function () {
-      var header = $('header');
-      var nav = $('nav');
-      var distance = 50; // Distância a partir do topo para mostrar o header
-  
-      // Adiciona um ouvinte de evento de rolagem para manipular o navbar e header
-      $(window).scroll(function () {
-        var currentScrollTop = $(window).scrollTop();
-  
-        if (currentScrollTop > distance) {
-          // Scrolling down
-          header.addClass('hidden');
-          nav.css({ top: '0' });
-        } else {
-          // Scrolling up
-          header.removeClass('hidden');
-          nav.css({ top: '90px' }); // Ajuste conforme necessário
-        }
-      });
-    });
     
-
 /* Atualize seu script JavaScript */
       // Adiciona um evento quando a página termina de carregar
       document.addEventListener('DOMContentLoaded', function () {
