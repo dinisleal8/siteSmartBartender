@@ -32,6 +32,7 @@ header {
 .logo {
     width: 100px; /* Ajuste a largura conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer;
 }
 
 nav {
@@ -92,7 +93,7 @@ nav ul li a:hover {
       position: relative; /* Adiciona posicionamento relativo ao contêiner */
       overflow: hidden; /* Remove as bordas brancas da imagem */
       text-align: center; /* Centraliza o texto horizontalmente */
-      margin-top: 60px; /* Ajusta o espaço entre o header e o conteúdo e move o texto um pouco para cima */
+      
       animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
     }
 
@@ -110,7 +111,7 @@ nav ul li a:hover {
       width: 100%;
       height: auto;
       object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
-      margin-top: 53px; /* Ajusta a margem superior para mover a imagem para baixo */
+     
     }
 
     .containerfooter{
@@ -345,7 +346,7 @@ nav ul li a:hover {
 
 <!-- Header -->
 <header>
-  <img src="./imgs/logoheader.png" alt="Logo" class="logo">
+  <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logo">
 </header>
 <nav>
   <ul>

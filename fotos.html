@@ -48,6 +48,7 @@ header {
 .logo {
     width: 100px; /* Ajuste a largura conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer;
 }
 
 nav {
@@ -219,7 +220,6 @@ nav ul li a:hover {
       width: 100%;
       height: auto;
       object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
-      margin-top: -10px; /* Ajusta a margem superior para mover a imagem para baixo */
     }
 
     .cabeçalho h1 {
@@ -246,7 +246,6 @@ nav ul li a:hover {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
-      margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
     }
 
     .cabeçalho p {
@@ -334,7 +333,7 @@ nav ul li a:hover {
 
 <body>
   <header>
-    <img src="./imgs/logoheader.png" alt="Logo" class="logo">
+    <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logo">
   </header>
   <nav>
     <ul>
