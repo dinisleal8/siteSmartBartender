@@ -6,16 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" href="imgs\logo.png" type="image/png">
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Smart Bartender</title>
   <style>
     /* Reset some default styles */
-    body, h1, h2, p, ul {
+    body,
+    h1,
+    h2,
+    p,
+    ul {
       margin: 0;
       padding: 0;
     }
@@ -23,95 +28,109 @@
     body {
       font-family: "Times New Roman", Georgia, Serif;
       line-height: 1.6;
-      opacity: 0; /* Define a opacidade inicial para 0 */
-      background-color: #f8f9fa; /* Define a cor de fundo para toda a página */
+      opacity: 0;
+      /* Define a opacidade inicial para 0 */
+      background-color: #f8f9fa;
+      /* Define a cor de fundo para toda a página */
     }
-    
+
 
     header {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
-}
+      background-color: black;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-.logoo {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    cursor: pointer;
-}
+    .logoo {
+      width: 100px;
+      /* Ajuste a largura conforme necessário */
+      height: auto;
+      /* Mantém a proporção da imagem */
+      cursor: pointer;
+    }
 
-nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-}
+    }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    
-}
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-nav ul li {
-    float: left;
-   
-}
+    }
 
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
+    nav ul li {
+      float: left;
 
-nav ul li a:hover {
-  color: #ff0; /* Cor ao passar o mouse */
-}
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #ff0;
+      /* Cor ao passar o mouse */
+    }
 
     @media screen and (max-width: 767px) {
       nav {
-      display: flex;
-      padding: 0px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
+        display: flex;
+        padding: 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .cabeçalho::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        /* Altura do efeito de fade */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa);
+        /* Gradiente de transparente para a cor de fundo */
+        z-index: 2;
+        /* Assegura que a sobreposição fique acima da imagem */
+      }
+
     }
-    .cabeçalho::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px; /* Altura do efeito de fade */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa); /* Gradiente de transparente para a cor de fundo */
-  z-index: 2; /* Assegura que a sobreposição fique acima da imagem */
-}
 
-  }
 
-    
     .cabeçalho {
-      position: relative; /* Adiciona posicionamento relativo ao contêiner */
-      overflow: hidden; /* Remove as bordas brancas da imagem */
-      text-align: center; /* Centraliza o texto horizontalmente */
-      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+      position: relative;
+      /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden;
+      /* Remove as bordas brancas da imagem */
+      text-align: center;
+      /* Centraliza o texto horizontalmente */
+      animation: fadeIn 1s ease-in-out;
+      /* Adiciona a animação de fadeIn */
     }
-    
+
 
     @keyframes fadeIn {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -120,21 +139,27 @@ nav ul li a:hover {
     .cabeçalho img {
       width: 100%;
       height: auto;
-      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
-      
+      object-fit: cover;
+      /* Adiciona object-fit para cobrir toda a área do contêiner */
+
     }
 
     .cabeçalho h1 {
-      position: absolute; /* Adiciona posicionamento absoluto */
-      top: 35%; /* Move o elemento para o centro vertical */
-      left: 30%; /* Move o elemento para o centro horizontal */
-      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
+      position: absolute;
+      /* Adiciona posicionamento absoluto */
+      top: 35%;
+      /* Move o elemento para o centro vertical */
+      left: 30%;
+      /* Move o elemento para o centro horizontal */
+      transform: translate(-50%, -50%);
+      /* Centraliza o elemento vertical e horizontalmente */
       color: #fff;
       font-weight: 400;
       text-transform: uppercase;
       font-size: clamp(1rem, 5vw, 5rem);
       font-family: "Cormorant Garamond", serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      /* Adiciona sombra ao texto */
       letter-spacing: 5px;
       text-align: left;
     }
@@ -148,17 +173,19 @@ nav ul li a:hover {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
-      
+
     }
 
     .cabeçalho p {
-      margin: 20px 0; /* Espaço acima do parágrafo */
+      margin: 20px 0;
+      /* Espaço acima do parágrafo */
     }
 
 
     #descricao {
       background-color: #f8f8f8;
-      padding: 40px 20px 0; /* Ajusta o espaçamento superior */
+      padding: 40px 20px 0;
+      /* Ajusta o espaçamento superior */
       text-align: center;
     }
 
@@ -189,15 +216,19 @@ nav ul li a:hover {
 
     #descricao strong {
       font-weight: bold;
-      color: #000; /* Cor do texto em negrito */
+      color: #000;
+      /* Cor do texto em negrito */
     }
 
     /* Services Section */
     #services {
-      max-width: 600px; /* Ajuste a largura máxima conforme necessário */
-      margin: 0 auto; /* Centraliza a seção na tela */
+      max-width: 600px;
+      /* Ajuste a largura máxima conforme necessário */
+      margin: 0 auto;
+      /* Centraliza a seção na tela */
       background-color: #f8f9fa;
-      padding: 30px 20px; /* Ajusta o espaçamento interno */
+      padding: 30px 20px;
+      /* Ajusta o espaçamento interno */
       text-align: center;
       margin-top: 50px;
     }
@@ -207,129 +238,136 @@ nav ul li a:hover {
       letter-spacing: 5px;
       margin-bottom: 20px;
       font-size: 36px;
-      color: black; 
+      color: black;
     }
 
     .service {
-      margin: 10px; /* Reduz a margem entre os serviços */
+      margin: 10px;
+      /* Reduz a margem entre os serviços */
     }
 
     .service i {
       font-size: 48px;
-      color: #ff8c00; /* Laranja */
+      color: #ff8c00;
+      /* Laranja */
       margin-bottom: 10px;
     }
 
     .service h4 {
       font-family: "Playfair Display";
-      letter-spacing: 5px;  
-      font-size: 20px; /* Reduz o tamanho do título do serviço */
-      margin-bottom: 5px; /* Reduz a margem inferior do título */
+      letter-spacing: 5px;
+      font-size: 20px;
+      /* Reduz o tamanho do título do serviço */
+      margin-bottom: 5px;
+      /* Reduz a margem inferior do título */
       color: #343a40;
     }
 
     .service p {
-      font-size: 16px; /* Reduz o tamanho do texto do serviço */
+      font-size: 16px;
+      /* Reduz o tamanho do texto do serviço */
       color: #6c757d;
     }
 
-    .containerfooter{
-     
-     max-width: 1170px;
-     margin:auto;
-   }
+    .containerfooter {
 
-   .rowfooter{
-     display: flex;
-     flex-wrap: wrap;
-   }
+      max-width: 1170px;
+      margin: auto;
+    }
 
-    ul{
-     list-style: none;
-   }
+    .rowfooter {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-   .footer{
+    ul {
+      list-style: none;
+    }
+
+    .footer {
       margin-top: 150px;
       background-color: #24262b;
       padding: 70px 0;
-   }
+    }
 
-   .footer-col{
-    width: 25%;
-    padding: 0 15px;
-   }
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
 
-   .footer-col h4{
-     font-size: 18px;
-     color: #ffffff;
-     text-transform: capitalize;
-     margin-bottom: 35px;
-     font-weight: 500;
-     position: relative;
-   }
-   .footer-col h4::before{
-     content: '';
-     position: absolute;
-     left:0;
-     bottom: -10px;
-     background-color: #e91e63;
-     height: 2px;
-     box-sizing: border-box;
-     width: 50px;
-   }
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
 
-   .footer-col ul li:not(:last-child){
-     margin-bottom: 10px;
-   }
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
 
-   .footer-col ul li a{
-     font-size: 16px;
-     text-transform: capitalize;
-     color: #ffffff;
-     text-decoration: none;
-     font-weight: 300;
-     color: #bbbbbb;
-     display: block;
-     transition: all 0.3s ease;
-   }
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-   .footer-col ul li a:hover{
-     color: #ffffff;
-     padding-left: 8px;
-   }
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
 
-   .footer-col .social-links a{
-     display: inline-block;
-     height: 40px;
-     width: 40px;
-     background-color: rgba(255,255,255,0.2);
-     margin:0 10px 10px 0;
-     text-align: center;
-     line-height: 40px;
-     border-radius: 50%;
-     color: #ffffff;
-     transition: all 0.5s ease;
-   }
-   
-   .footer-col .social-links a:hover{
-     color: #24262b;
-     background-color: #ffffff;
-   }
-   
-   .footer p {
-     color: white;
-     font-weight: bold;
-   }
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer p {
+      color: white;
+      font-weight: bold;
+    }
 
     .service-icon {
-      max-width: 80px; /* Reduz a largura máxima do ícone do serviço */
+      max-width: 80px;
+      /* Reduz a largura máxima do ícone do serviço */
       height: auto;
     }
 
     #bout h3 {
       font-size: 36px;
       font-family: "Playfair Display";
-      letter-spacing: 5px;  
+      letter-spacing: 5px;
       text-align: center;
     }
 
@@ -342,19 +380,23 @@ nav ul li a:hover {
 
     /* Adicione um estilo para o botão "Saiba Mais!" */
     .saiba-mais-btn {
-      background-color: orange; /* Cor de fundo do botão */
+      background-color: orange;
+      /* Cor de fundo do botão */
       color: white;
-      padding: 15px 25px; /* Espaçamento interno */
+      padding: 15px 25px;
+      /* Espaçamento interno */
       font-size: 16px;
       border: none;
-      border-radius: 5px; /* Cantos arredondados */
+      border-radius: 5px;
+      /* Cantos arredondados */
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s;
     }
 
     .saiba-mais-btn:hover {
-      background-color: #b98121; /* Cor de fundo ao passar o mouse */
+      background-color: #b98121;
+      /* Cor de fundo ao passar o mouse */
     }
 
     .intro {
@@ -398,100 +440,112 @@ nav ul li a:hover {
 
     .intro img {
       animation: fadeIn 1.5s ease-in-out;
-       width: 15%;
-        margin: auto;
-       display: block;
-       margin-top: 80px;
-   }
+      width: 15%;
+      margin: auto;
+      display: block;
+      margin-top: 80px;
+    }
 
-      ::-webkit-scrollbar {
-      width: 12px; /* Largura do scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+      /* Largura do scrollbar */
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f1f1; /* Cor do fundo do scrollbar */
+      background: #f1f1f1;
+      /* Cor do fundo do scrollbar */
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: #888; /* Cor do botão de rolagem */
-      border-radius: 6px; /* Cantos arredondados do botão de rolagem */
-      border: 3px solid #f1f1f1; /* Borda do botão de rolagem */
+      background-color: #888;
+      /* Cor do botão de rolagem */
+      border-radius: 6px;
+      /* Cantos arredondados do botão de rolagem */
+      border: 3px solid #f1f1f1;
+      /* Borda do botão de rolagem */
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: #555; /* Cor do botão de rolagem ao passar o mouse */
+      background-color: #555;
+      /* Cor do botão de rolagem ao passar o mouse */
     }
 
     @media screen and (max-width: 767px) {
-    .intro img {
-      width: 50%;
-    }
-    .logo {
-      font-size: 30px;
-    }
-    #bout {
-      width: 80%;
-    }
-    nav {
-      display: flex;
-      padding: 0px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
-    }
-    .cabeçalho div {
-      display: none;
-    }
-  }
+      .intro img {
+        width: 50%;
+      }
 
-  @media(max-width: 767px){
-     .footer-col{
-       width: 50%;
-       margin-bottom: 30px;
-   }
-   }
-   @media(max-width: 574px){
-     .footer-col{
-       width: 100%;
-   }
-   }
+      .logo {
+        font-size: 30px;
+      }
 
+      #bout {
+        width: 80%;
+      }
+
+      nav {
+        display: flex;
+        padding: 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .cabeçalho div {
+        display: none;
+      }
+    }
+
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
   </style>
-  
+
 
 </head>
 
 <body>
 
-    <div class="intro"> 
-      <img src="./imgs/logo.png" alt="logodaintro">
-        <h1 class="logo-header"> 
-          <span class="logo" >Smart </span><span class="logo">Bartender</span> 
-        </h1> 
-      </div> 
+  <div class="intro">
+    <img src="./imgs/logo.png" alt="logodaintro">
+    <h1 class="logo-header">
+      <span class="logo">Smart </span><span class="logo">Bartender</span>
+    </h1>
+  </div>
 
-      <header>
-        <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logoo">
-      </header>
-      <nav>
-        <ul>
-            <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
-            <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
-            <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
-            <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
-            <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
-        </ul>
-      </nav>
+  <header>
+    <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logoo">
+  </header>
+  <nav>
+    <ul>
+      <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
+      <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
+      <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
+      <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
+    </ul>
+  </nav>
 
   <div class="cabeçalho">
     <img src="./imgs/fundo2.png" alt="SBartender">
     <h1>Smart<br>Bartender</h1>
     <div>
-      <p>Explore o fascinante mundo da coquetelaria com o Smart Bartender. Descubra receitas exclusivas, ingredientes e experimente a mistura perfeita para suas bebidas favoritas. Deixe o Smart Bartender levar sua experiência de coquetel a novas alturas!</p>
+      <p>Explore o fascinante mundo da coquetelaria com o Smart Bartender. Descubra receitas exclusivas, ingredientes e
+        experimente a mistura perfeita para suas bebidas favoritas. Deixe o Smart Bartender levar sua experiência de
+        coquetel a novas alturas!</p>
     </div>
   </div>
-  
+
   <!-- Services Section -->
   <div id="services" class="services-section">
     <h3>Serviços</h3>
@@ -501,7 +555,8 @@ nav ul li a:hover {
       <p>Desenvolvemos receitas inovadoras usando a tecnologia do Smart Bartender para experiências únicas.</p>
     </div>
     <div class="service">
-      <img src="./imgs/txt-quais-tipos-de-bebidas-que-combinadas-dao-certo-removebg-preview.png" alt="Ícone 2" class="service-icon">
+      <img src="./imgs/txt-quais-tipos-de-bebidas-que-combinadas-dao-certo-removebg-preview.png" alt="Ícone 2"
+        class="service-icon">
       <h4>Misturas Personalizadas</h4>
       <p>Crie suas próprias misturas personalizadas com orientações passo a passo e ingredientes de qualidade.</p>
     </div>
@@ -519,7 +574,7 @@ nav ul li a:hover {
 
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="bout">
 
-    <h3 class="w3-padding-16 w3-text-black" >Competências Utilizadas</h3><br>
+    <h3 class="w3-padding-16 w3-text-black">Competências Utilizadas</h3><br>
     <p class="w3-wide">Programação</p>
     <div class="w3-dark-gray">
       <div class="w3-orange" style="height:28px;width:70%"></div>
@@ -561,7 +616,7 @@ nav ul li a:hover {
             <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
             <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
             <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
-        </ul>
+          </ul>
           </ul>
         </div>
         <div class="footer-col">
@@ -582,7 +637,7 @@ nav ul li a:hover {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
+  <script>
     // jQuery para esconder o header e o nav inicialmente
     let intro = document.querySelector(".intro");
     let logoSpan = document.querySelectorAll(".logo");
@@ -619,6 +674,7 @@ nav ul li a:hover {
       ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
       ScrollReveal().reveal('#bout', { duration: 1000, origin: 'bottom', distance: '20px' });
       ScrollReveal().reveal('.saiba-mais-btn', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.cabeçalho h1', { duration: 1000, origin: 'bottom', distance: '20px' });
       // Define a opacidade para 1 após o carregamento da página
       document.body.style.opacity = 1;
     });

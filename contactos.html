@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
   <link rel="icon" href="imgs\logo.png" type="image/png">
   <title>Smart Bartender</title>
   <style>
-
     /* Reset some default styles */
-    body, h1, h2, p, ul {
+    body,
+    h1,
+    h2,
+    p,
+    ul {
       margin: 0;
       padding: 0;
     }
@@ -21,73 +26,78 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      opacity: 0; /* Define a opacidade inicial para 0 */
-      background-color: #f8f9fa; /* Define a cor de fundo para toda a página */
+      opacity: 0;
+      /* Define a opacidade inicial para 0 */
+      background-color: #f8f9fa;
+      /* Define a cor de fundo para toda a página */
       font-family: "Times New Roman", Georgia, Serif;
     }
-    
+
     header {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.logo {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    cursor: pointer;
-}
-
-nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    
-}
-
-nav ul li {
-    float: left;
-   
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #ff0; /* Cor ao passar o mouse */
-}
-
-    @media screen and (max-width: 767px) {
-    nav {
-      display: flex;
-      padding: 0px;
+      background-color: black;
       text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
+      padding: 10px 0;
     }
 
-}
+    .logo {
+      width: 100px;
+      /* Ajuste a largura conforme necessário */
+      height: auto;
+      /* Mantém a proporção da imagem */
+      cursor: pointer;
+    }
 
-    .wrapper{
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    nav ul li {
+      float: left;
+
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #ff0;
+      /* Cor ao passar o mouse */
+    }
+
+    @media screen and (max-width: 767px) {
+      nav {
+        display: flex;
+        padding: 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
+
+    }
+
+    .wrapper {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -96,32 +106,38 @@ nav ul li a:hover {
       border-radius: 5px;
 
     }
-    .wrapper h1{
+
+    .wrapper h1 {
       text-align: center;
       font-family: "Playfair Display";
       letter-spacing: 5px;
       font-size: 32px;
       justify-content: center;
     }
-    .wrapper form{
+
+    .wrapper form {
       margin: 35px 30px;
     }
-    .wrapper form.disabled{
+
+    .wrapper form.disabled {
       pointer-events: none;
       opacity: 0.7;
     }
-    form .dbl-field{
+
+    form .dbl-field {
       display: flex;
       margin-bottom: 25px;
       justify-content: space-between;
     }
-    .dbl-field .field{
+
+    .dbl-field .field {
       height: 50px;
       display: flex;
       position: relative;
       width: calc(100% / 2 - 13px);
     }
-    .wrapper form i{
+
+    .wrapper form i {
       position: absolute;
       top: 50%;
       left: 18px;
@@ -130,8 +146,9 @@ nav ul li a:hover {
       pointer-events: none;
       transform: translateY(-50%);
     }
+
     form .field input,
-    form .message textarea{
+    form .message textarea {
       width: 100%;
       height: 100%;
       outline: none;
@@ -140,45 +157,55 @@ nav ul li a:hover {
       border-radius: 5px;
       border: 1px solid #ccc;
     }
+
     .field input::placeholder,
-    .message textarea::placeholder{
+    .message textarea::placeholder {
       color: #ccc;
     }
+
     .field input:focus,
-    .message textarea:focus{
+    .message textarea:focus {
       padding-left: 47px;
       border: 2px solid #0D6EFD;
     }
-    .field input:focus ~ i,
-    .message textarea:focus ~ i{
+
+    .field input:focus~i,
+    .message textarea:focus~i {
       color: #0D6EFD;
     }
-    form .message{
+
+    form .message {
       position: relative;
     }
-    form .message i{
+
+    form .message i {
       top: 30px;
       font-size: 20px;
     }
-    form .message textarea{
+
+    form .message textarea {
       min-height: 130px;
       max-height: 230px;
       max-width: 100%;
       min-width: 100%;
       padding: 15px 20px 0 48px;
     }
-    form .message textarea::-webkit-scrollbar{
+
+    form .message textarea::-webkit-scrollbar {
       width: 0px;
     }
-    .message textarea:focus{
+
+    .message textarea:focus {
       padding-top: 14px;
     }
-    form .button-area{
+
+    form .button-area {
       margin: 25px 0;
       display: flex;
       align-items: center;
     }
-    .button-area button{
+
+    .button-area button {
       color: #fff;
       border: none;
       outline: none;
@@ -189,156 +216,185 @@ nav ul li a:hover {
       background: #0D6EFD;
       transition: background 0.3s ease;
     }
-    .button-area button:hover{
+
+    .button-area button:hover {
       background: #025ce3;
     }
-    .button-area span{
+
+    .button-area span {
       font-size: 17px;
       margin-left: 30px;
       display: none;
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
       .wrapper h1 {
         text-align: center;
       }
-      .wrapper form{
+
+      .wrapper form {
         margin: 35px 20px;
       }
-      form .dbl-field{
+
+      form .dbl-field {
         flex-direction: column;
         margin-bottom: 0px;
         width: 150%;
         margin-left: -45px;
       }
-      form .dbl-field .field{
+
+      form .dbl-field .field {
         width: 100%;
         height: 45px;
         margin-bottom: 20px;
       }
-      form .message textarea{
+
+      form .message textarea {
         resize: none;
-        
+
       }
-      form .button-area{
+
+      form .button-area {
         margin-top: 20px;
         flex-direction: column;
       }
-      .button-area button{
+
+      .button-area button {
         width: 100%;
         padding: 11px 0;
         font-size: 16px;
       }
-      .button-area span{
+
+      .button-area span {
         margin: 20px 0 0;
         text-align: center;
       }
+
       .message {
         width: 150%;
         margin-left: -45px;
       }
     }
 
-    .containerfooter{
-     
-	max-width: 1170px;
-	margin:auto;
-}
-.rowfooter{
-	display: flex;
-	flex-wrap: wrap;
-}
-ul{
-	list-style: none;
-}
-.footer{
-  margin-top: 150px;
-	background-color: #24262b;
-    padding: 70px 0;
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
+    .containerfooter {
 
-.footer p {
-  color: white;
-  font-weight: bold;
-}
+      max-width: 1170px;
+      margin: auto;
+    }
 
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
-.cabeçalho {
-      position: relative; /* Adiciona posicionamento relativo ao contêiner */
-      overflow: hidden; /* Remove as bordas brancas da imagem */
-      text-align: center; /* Centraliza o texto horizontalmente */
-      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+    .rowfooter {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .footer {
+      margin-top: 150px;
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer p {
+      color: white;
+      font-weight: bold;
+    }
+
+    /*responsive*/
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+
+    .cabeçalho {
+      position: relative;
+      /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden;
+      /* Remove as bordas brancas da imagem */
+      text-align: center;
+      /* Centraliza o texto horizontalmente */
+      animation: fadeIn 1s ease-in-out;
+      /* Adiciona a animação de fadeIn */
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -347,20 +403,26 @@ ul{
     .cabeçalho img {
       width: 100%;
       height: auto;
-      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
+      object-fit: cover;
+      /* Adiciona object-fit para cobrir toda a área do contêiner */
     }
 
     .cabeçalho h1 {
-      position: absolute; /* Adiciona posicionamento absoluto */
-      top: 35%; /* Move o elemento para o centro vertical */
-      left: 30%; /* Move o elemento para o centro horizontal */
-      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
+      position: absolute;
+      /* Adiciona posicionamento absoluto */
+      top: 35%;
+      /* Move o elemento para o centro vertical */
+      left: 30%;
+      /* Move o elemento para o centro horizontal */
+      transform: translate(-50%, -50%);
+      /* Centraliza o elemento vertical e horizontalmente */
       color: #fff;
       font-weight: 400;
       text-transform: uppercase;
       font-size: clamp(1rem, 5vw, 5rem);
       font-family: "Cormorant Garamond", serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      /* Adiciona sombra ao texto */
       letter-spacing: 5px;
       text-align: left;
     }
@@ -374,21 +436,26 @@ ul{
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
-      margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
+      margin-bottom: 1px;
+      /* Adiciona margem inferior para compensar a margem superior da imagem */
     }
 
     .cabeçalho p {
-      margin: 20px 0; /* Espaço acima do parágrafo */
+      margin: 20px 0;
+      /* Espaço acima do parágrafo */
     }
 
     #iframe-container {
-      width: 50%; /* Defina a largura desejada para o iframe */
-      height: 500px; /* Defina a altura desejada para o iframe */
+      width: 50%;
+      /* Defina a largura desejada para o iframe */
+      height: 500px;
+      /* Defina a altura desejada para o iframe */
       display: block;
       margin-top: 120px;
       margin-bottom: 50px;
       margin: auto;
     }
+
     #iframe-container h1 {
       font-family: Playfair Display;
       letter-spacing: 5px;
@@ -401,213 +468,231 @@ ul{
       height: 100%;
       border: 0;
     }
-    
-@media (max-width: 767px) {
-  #iframe-container {
-    width: 80%;
-    margin: auto;
-  }
-    .cabeçalho div {
-      display: none;
+
+    @media (max-width: 767px) {
+      #iframe-container {
+        width: 80%;
+        margin: auto;
+      }
+
+      .cabeçalho div {
+        display: none;
+      }
+
+      .cabeçalho::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        /* Altura do efeito de fade */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa);
+        /* Gradiente de transparente para a cor de fundo */
+        z-index: 2;
+        /* Assegura que a sobreposição fique acima da imagem */
+      }
     }
-    .cabeçalho::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px; /* Altura do efeito de fade */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa); /* Gradiente de transparente para a cor de fundo */
-  z-index: 2; /* Assegura que a sobreposição fique acima da imagem */
-}
-}
 
     ::-webkit-scrollbar {
-      width: 12px; /* Largura do scrollbar */
+      width: 12px;
+      /* Largura do scrollbar */
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f1f1; /* Cor do fundo do scrollbar */
+      background: #f1f1f1;
+      /* Cor do fundo do scrollbar */
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: #888; /* Cor do botão de rolagem */
-      border-radius: 6px; /* Cantos arredondados do botão de rolagem */
-      border: 3px solid #f1f1f1; /* Borda do botão de rolagem */
+      background-color: #888;
+      /* Cor do botão de rolagem */
+      border-radius: 6px;
+      /* Cantos arredondados do botão de rolagem */
+      border: 3px solid #f1f1f1;
+      /* Borda do botão de rolagem */
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: #555; /* Cor do botão de rolagem ao passar o mouse */
+      background-color: #555;
+      /* Cor do botão de rolagem ao passar o mouse */
     }
-    
-    .accordion {
-    display: flex;
-    flex-direction: column;
-    font-family: "Sora", sans-serif;
-    max-width: 991px;
-    min-width: 320px;
-    margin: 50px auto;
-    padding: 0 50px;
-    margin-top: 100px;
-    margin-bottom: 150px;
-    width: 50%;
-}
-.accordion h1 {
-    font-size: 32px;
-    text-align: center;
-}
-.accordion-item {
-    margin-top: 16px;
-    border: 1px solid #fcfcfc;
-    border-radius: 6px;
-    background: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-.accordion-item .accordion-item-title {
-    position: relative;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    font-size: 15px;
-    cursor: pointer;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding: 14px 20px;
-    box-sizing: border-box;
-    align-items: center;
-}
-.accordion-item .accordion-item-desc {
-    display: none;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 300;
-    color: #444;
-    border-top: 1px dashed #ddd;
-    padding: 10px 20px 20px;
-    box-sizing: border-box;
-}
-.accordion-item input[type="checkbox"] {
-    position: absolute;
-    height: 0;
-    width: 0;
-    opacity: 0;
-}
-.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
-    display: block;
-}
-.accordion-item
-    input[type="checkbox"]:checked
-    ~ .accordion-item-title
-    .icon:after {
-    content: "-";
-    font-size: 20px;
-}
-.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
-    content: "+";
-    font-size: 20px;
-}
-.accordion-item:first-child {
-    margin-top: 0;
-}
-.accordion-item .icon {
-    margin-left: 14px;
-}
 
-@media screen and (max-width: 767px) {
     .accordion {
-        padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      font-family: "Sora", sans-serif;
+      max-width: 991px;
+      min-width: 320px;
+      margin: 50px auto;
+      padding: 0 50px;
+      margin-top: 100px;
+      margin-bottom: 150px;
+      width: 50%;
     }
+
     .accordion h1 {
-        font-size: 22px;
+      font-size: 32px;
+      text-align: center;
     }
-}
 
-.contact-info{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    gap: 70px;
-}
+    .accordion-item {
+      margin-top: 16px;
+      border: 1px solid #fcfcfc;
+      border-radius: 6px;
+      background: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
 
-.card{
-    position: relative;
-    flex: 1;
-    max-width: 210px;
-    height: 210px;
-    background: radial-gradient(circle, #3498db, #2980b9);
-    margin: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    
-}
+    .accordion-item .accordion-item-title {
+      position: relative;
+      margin: 0;
+      display: flex;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding: 14px 20px;
+      box-sizing: border-box;
+      align-items: center;
+    }
 
-.iconn{
-    font-size: 32px;
-    color: white;
-    transition: .3s linear;
-}
+    .accordion-item .accordion-item-desc {
+      display: none;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 300;
+      color: #444;
+      border-top: 1px dashed #ddd;
+      padding: 10px 20px 20px;
+      box-sizing: border-box;
+    }
 
-.card:hover .iconn{
-    transform: scale(4);
-    opacity: 0;
-}
+    .accordion-item input[type="checkbox"] {
+      position: absolute;
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
 
-.card-content h3,
-.card-content span{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    opacity: 0;
-}
+    .accordion-item input[type="checkbox"]:checked~.accordion-item-desc {
+      display: block;
+    }
 
-.card-content h3{
-    top: 20px;
-    text-transform: uppercase;
-    color: white;
-    font-family: "Playfair Display";
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
+    .accordion-item input[type="checkbox"]:checked~.accordion-item-title .icon:after {
+      content: "-";
+      font-size: 20px;
+    }
 
-.card-content span{
-    bottom: 20px;
-    color: #fff;
-    font-weight: 500;
-}
+    .accordion-item input[type="checkbox"]~.accordion-item-title .icon:after {
+      content: "+";
+      font-size: 20px;
+    }
 
-.card:hover h3{
-    opacity: 1;
-    top: 46px;
-    transition: .3s linear .3s;
-}
+    .accordion-item:first-child {
+      margin-top: 0;
+    }
 
-.card:hover span{
-    opacity: 1;
-    bottom: 46px;
-    transition: .3s linear .3s;
-}
+    .accordion-item .icon {
+      margin-left: 14px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .accordion {
+        padding: 0 16px;
+      }
+
+      .accordion h1 {
+        font-size: 22px;
+      }
+    }
+
+    .contact-info {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 100px;
+      gap: 70px;
+    }
+
+    .card {
+      position: relative;
+      flex: 1;
+      max-width: 210px;
+      height: 210px;
+      background: radial-gradient(circle, #3498db, #2980b9);
+      margin: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    }
+
+    .iconn {
+      font-size: 32px;
+      color: white;
+      transition: .3s linear;
+    }
+
+    .card:hover .iconn {
+      transform: scale(4);
+      opacity: 0;
+    }
+
+    .card-content h3,
+    .card-content span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      opacity: 0;
+    }
+
+    .card-content h3 {
+      top: 20px;
+      text-transform: uppercase;
+      color: white;
+      font-family: "Playfair Display";
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .card-content span {
+      bottom: 20px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .card:hover h3 {
+      opacity: 1;
+      top: 46px;
+      transition: .3s linear .3s;
+    }
+
+    .card:hover span {
+      opacity: 1;
+      bottom: 46px;
+      transition: .3s linear .3s;
+    }
 
 
-@media screen and (max-width:900px){
-    .card{
+    @media screen and (max-width:900px) {
+      .card {
         flex: 100%;
         max-width: 500px;
         border-radius: 0%;
-    }
-    .contact-info{
+      }
+
+      .contact-info {
         gap: 0px;
-}
-}
-
-
+      }
+    }
   </style>
 
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -619,19 +704,20 @@ ul{
   </header>
   <nav>
     <ul>
-        <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
-        <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
-        <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
-        <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
-        <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
+      <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
+      <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
+      <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
+      <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
     </ul>
   </nav>
-  
+
   <div class="cabeçalho">
     <img src="./imgs/contactos.jpg" alt="SBartender">
     <h1>Contactos</h1>
     <div>
-      <p>Entre em contato conosco para descobrir mais sobre nossos serviços. Sua satisfação é a nossa prioridade, e mal podemos esperar para atendê-lo. Vamos transformar seus eventos em experiências memoráveis juntos!</p>
+      <p>Entre em contato conosco para descobrir mais sobre nossos serviços. Sua satisfação é a nossa prioridade, e mal
+        podemos esperar para atendê-lo. Vamos transformar seus eventos em experiências memoráveis juntos!</p>
     </div>
   </div>
 
@@ -645,7 +731,7 @@ ul{
         </div>
       </a>
     </div>
-  
+
     <div class="card">
       <a href="tel:+00000000000">
         <i class="iconn fas fa-phone"></i>
@@ -655,7 +741,7 @@ ul{
         </div>
       </a>
     </div>
-  
+
     <div class="card">
       <a href="https://www.google.com/maps?q=Louriçal">
         <i class="iconn fas fa-map-marker-alt"></i>
@@ -666,9 +752,9 @@ ul{
       </a>
     </div>
   </div>
-  
-  
-  
+
+
+
   <div class="wrapper">
     <h1>Mande-nos uma mensagem</h1>
     <form action="mailto:geral@smartbartender.com" method="POST" enctype="text/plain">
@@ -705,114 +791,135 @@ ul{
 
 
 
-<!-- Título fora do contêiner FAQ -->
+  <!-- Título fora do contêiner FAQ -->
 
 
-<div class="accordion" id="faq">
-  <h1 style="font-family: Playfair Display; letter-spacing: 5px;">Perguntas Frequentes</h1>
-  <div class="accordion-item">
+  <div class="accordion" id="faq">
+    <h1 style="font-family: Playfair Display; letter-spacing: 5px;">Perguntas Frequentes</h1>
+    <div class="accordion-item">
       <input type="checkbox" id="accordion1">
-      <label for="accordion1" class="accordion-item-title"><span class="icon"></span>O que é um Smart Bartender e como ele funciona?</label>
-      <div class="accordion-item-desc">Um Smart Bartender é um sistema de bartender robótico projetado para automatizar o processo de mistura e servir bebidas. Ele utiliza sensores, atuadores e uma interface do usuário para receber e atender pedidos de bebidas, proporcionando uma experiência futurista e eficiente para os usuários.</div>
-  </div>
+      <label for="accordion1" class="accordion-item-title"><span class="icon"></span>O que é um Smart Bartender e como
+        ele funciona?</label>
+      <div class="accordion-item-desc">Um Smart Bartender é um sistema de bartender robótico projetado para automatizar
+        o processo de mistura e servir bebidas. Ele utiliza sensores, atuadores e uma interface do usuário para receber
+        e atender pedidos de bebidas, proporcionando uma experiência futurista e eficiente para os usuários.</div>
+    </div>
 
-  <div class="accordion-item">
+    <div class="accordion-item">
       <input type="checkbox" id="accordion2">
-      <label for="accordion2" class="accordion-item-title"><span class="icon"></span>Quanto tempo leva para configurar um Smart Bartender?</label>
-      <div class="accordion-item-desc">O tempo de configuração de um Smart Bartender pode variar com base em fatores como experiência técnica, familiaridade com os componentes e o design específico do sistema. Geralmente, usuários com alguma experiência em eletrônica e programação podem concluir a configuração em algumas horas ou durante um fim de semana.</div>
-  </div>
+      <label for="accordion2" class="accordion-item-title"><span class="icon"></span>Quanto tempo leva para configurar
+        um Smart Bartender?</label>
+      <div class="accordion-item-desc">O tempo de configuração de um Smart Bartender pode variar com base em fatores
+        como experiência técnica, familiaridade com os componentes e o design específico do sistema. Geralmente,
+        usuários com alguma experiência em eletrônica e programação podem concluir a configuração em algumas horas ou
+        durante um fim de semana.</div>
+    </div>
 
-  <div class="accordion-item">
+    <div class="accordion-item">
       <input type="checkbox" id="accordion3">
-      <label for="accordion3" class="accordion-item-title"><span class="icon"></span>Quais são os componentes essenciais necessários para construir um Smart Bartender?</label>
-      <div class="accordion-item-desc">A construção de um Smart Bartender requer componentes-chave como microcontroladores, bombas peristálticas, sensores de nível de líquido, uma interface de exibição e uma estrutura robusta. Além disso, habilidades de programação são cruciais para criar o software necessário para controlar os processos de mistura e servir.</div>
-  </div>
+      <label for="accordion3" class="accordion-item-title"><span class="icon"></span>Quais são os componentes essenciais
+        necessários para construir um Smart Bartender?</label>
+      <div class="accordion-item-desc">A construção de um Smart Bartender requer componentes-chave como
+        microcontroladores, bombas peristálticas, sensores de nível de líquido, uma interface de exibição e uma
+        estrutura robusta. Além disso, habilidades de programação são cruciais para criar o software necessário para
+        controlar os processos de mistura e servir.</div>
+    </div>
 
-  <div class="accordion-item">
+    <div class="accordion-item">
       <input type="checkbox" id="accordion4">
-      <label for="accordion4" class="accordion-item-title"><span class="icon"></span>Como a personalização pode ser feita no Smart Bartender para preferências de bebida personalizadas?</label>
-      <div class="accordion-item-desc">A personalização no Smart Bartender pode ser alcançada por meio de modificações na programação das receitas de bebidas e na interface do usuário. Os usuários podem personalizar preferências de bebida, ingredientes e até criar coquetéis personalizados ajustando o código e as configurações do sistema.</div>
-  </div>
+      <label for="accordion4" class="accordion-item-title"><span class="icon"></span>Como a personalização pode ser
+        feita no Smart Bartender para preferências de bebida personalizadas?</label>
+      <div class="accordion-item-desc">A personalização no Smart Bartender pode ser alcançada por meio de modificações
+        na programação das receitas de bebidas e na interface do usuário. Os usuários podem personalizar preferências de
+        bebida, ingredientes e até criar coquetéis personalizados ajustando o código e as configurações do sistema.
+      </div>
+    </div>
 
-  <div class="accordion-item">
+    <div class="accordion-item">
       <input type="checkbox" id="accordion5">
-      <label for="accordion5" class="accordion-item-title"><span class="icon"></span>Há alguma consideração de segurança ao usar um Smart Bartender?</label>
-      <div class="accordion-item-desc">Garantir a segurança ao usar um Smart Bartender é essencial. Os usuários devem seguir práticas adequadas de segurança elétrica, garantir os mecanismos de dispensação e implementar proteções na programação para evitar acidentes. É crucial revisar e aderir às diretrizes de segurança fornecidas na documentação do projeto.</div>
+      <label for="accordion5" class="accordion-item-title"><span class="icon"></span>Há alguma consideração de segurança
+        ao usar um Smart Bartender?</label>
+      <div class="accordion-item-desc">Garantir a segurança ao usar um Smart Bartender é essencial. Os usuários devem
+        seguir práticas adequadas de segurança elétrica, garantir os mecanismos de dispensação e implementar proteções
+        na programação para evitar acidentes. É crucial revisar e aderir às diretrizes de segurança fornecidas na
+        documentação do projeto.</div>
+    </div>
   </div>
-</div>
 
 
   <div id="iframe-container">
     <h1>Encontre-nos</h1>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.1809786828057!2d-8.745705724153579!3d40.00440487150876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd224163d83775f9%3A0x70d18987742b6cc1!2sInstituto%20D.Jo%C3%A3o%20V!5e0!3m2!1spt-PT!2spt!4v1705927549944!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.1809786828057!2d-8.745705724153579!3d40.00440487150876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd224163d83775f9%3A0x70d18987742b6cc1!2sInstituto%20D.Jo%C3%A3o%20V!5e0!3m2!1spt-PT!2spt!4v1705927549944!5m2!1spt-PT!2spt"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
-</div>
+  </div>
 
-<footer class="footer">
-  <div class="containerfooter">
-    <div class="rowfooter">
-      <div class="footer-col">
-        <h4>Sobre o Smart Bartender</h4>
-        <ul>
-          <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
-          <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
-          <li><a href="projeto.html#equipa">Nossa equipa</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Ajuda</h4>
-        <ul>
-          <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
-          <li><a href="projeto.html#section1">Guia de Montagem</a></li>
-          <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
-          <li><a href="contactos.html">Opções de Apoio</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Recursos Avançados</h4>
-        <ul>
-          <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
-          <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
-          <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
-      </ul>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Siga-nos</h4>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          <p>2024 Smart Bartender</p>
+  <footer class="footer">
+    <div class="containerfooter">
+      <div class="rowfooter">
+        <div class="footer-col">
+          <h4>Sobre o Smart Bartender</h4>
+          <ul>
+            <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
+            <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
+            <li><a href="projeto.html#equipa">Nossa equipa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
+            <li><a href="projeto.html#section1">Guia de Montagem</a></li>
+            <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
+            <li><a href="contactos.html">Opções de Apoio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos Avançados</h4>
+          <ul>
+            <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
+            <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
+            <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
+          </ul>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            <p>2024 Smart Bartender</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-      
-/* Atualize seu script JavaScript */
-      // Adiciona um evento quando a página termina de carregar
-      document.addEventListener('DOMContentLoaded', function () {
-        // Inicializa o ScrollReveal
-        ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('.contact-info', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('.wrapper', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('iframe', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('h2', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('.faq-container', { duration: 1000, origin: 'bottom', distance: '20px' });
-        ScrollReveal().reveal('.accordion', { duration: 1000, origin: 'bottom', distance: '20px' });
-        // Define a opacidade para 1 após o carregamento da página
-        document.body.style.opacity = 1;
-      });
-    </script>
+
+    // Adiciona um evento quando a página termina de carregar
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializa o ScrollReveal
+      ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.contact-info', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.wrapper', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('iframe', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('h2', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.accordion', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('h1', { duration: 1000, origin: 'bottom', distance: '20px' });
+      // Define a opacidade para 1 após o carregamento da página
+      document.body.style.opacity = 1;
+    });
+  </script>
 
 </body>
 

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" href="imgs\logo.png" type="image/png">
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Smart Bartender</title>
   <style>
     /* Reset some default styles */
-    body, h1, h2, p, ul {
+    body,
+    h1,
+    h2,
+    p,
+    ul {
       margin: 0;
       padding: 0;
     }
@@ -21,212 +27,229 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      opacity: 0; /* Define a opacidade inicial para 0 */
-      background-color: #f8f9fa; /* Define a cor de fundo para toda a página */
+      opacity: 0;
+      /* Define a opacidade inicial para 0 */
+      background-color: #f8f9fa;
+      /* Define a cor de fundo para toda a página */
       font-family: "Times New Roman", Georgia, Serif;
     }
-    
+
 
 
     @media screen and (max-width: 767px) {
-        .background-section p {
-      margin: 3px 0; /* Espaço acima do parágrafo */
-      font-size: 12px;
-    
-    }
-      #myGrid{
+      .background-section p {
+        margin: 3px 0;
+        /* Espaço acima do parágrafo */
+        font-size: 12px;
+
+      }
+
+      #myGrid {
         display: flex;
+      }
     }
-}
 
-header {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.logo {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    cursor: pointer;
-}
-
-nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    
-}
-
-nav ul li {
-    float: left;
-   
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #ff0; /* Cor ao passar o mouse */
-}
-
-
-    @media screen and (max-width: 767px) {
-    nav {
-      display: flex;
-      padding: 0px;
+    header {
+      background-color: black;
       text-align: center;
+      padding: 10px 0;
+    }
+
+    .logo {
+      width: 100px;
+      /* Ajuste a largura conforme necessário */
+      height: auto;
+      /* Mantém a proporção da imagem */
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 12px;
+
     }
 
-    .cabeçalho div {
-      display: none;
+    nav ul li {
+      float: left;
+
     }
 
-    .cabeçalho::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px; /* Altura do efeito de fade */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa); /* Gradiente de transparente para a cor de fundo */
-  z-index: 2; /* Assegura que a sobreposição fique acima da imagem */
-}
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
 
-}
+    nav ul li a:hover {
+      color: #ff0;
+      /* Cor ao passar o mouse */
+    }
 
-    .containerfooter{
-     max-width: 1170px;
-     margin:auto;
-   }
 
-   .rowfooter{
-     display: flex;
-     flex-wrap: wrap;
-   }
+    @media screen and (max-width: 767px) {
+      nav {
+        display: flex;
+        padding: 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
 
-   ul{
-     list-style: none;
-   }
+      .cabeçalho div {
+        display: none;
+      }
 
-   .footer{
-     margin-top: 150px;
-     background-color: #24262b;
-       padding: 70px 0;
-   }
+      .cabeçalho::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        /* Altura do efeito de fade */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8f9fa);
+        /* Gradiente de transparente para a cor de fundo */
+        z-index: 2;
+        /* Assegura que a sobreposição fique acima da imagem */
+      }
 
-   .footer-col{
+    }
+
+    .containerfooter {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .rowfooter {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .footer {
+      margin-top: 150px;
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
       width: 25%;
       padding: 0 15px;
-   }
+    }
 
-   .footer-col h4{
-     font-size: 18px;
-     color: #ffffff;
-     text-transform: capitalize;
-     margin-bottom: 35px;
-     font-weight: 500;
-     position: relative;
-   }
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
 
-   .footer-col h4::before{
-     content: '';
-     position: absolute;
-     left:0;
-     bottom: -10px;
-     background-color: #e91e63;
-     height: 2px;
-     box-sizing: border-box;
-     width: 50px;
-   }
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
 
-   .footer-col ul li:not(:last-child){
-     margin-bottom: 10px;
-   }
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-   .footer-col ul li a{
-     font-size: 16px;
-     text-transform: capitalize;
-     color: #ffffff;
-     text-decoration: none;
-     font-weight: 300;
-     color: #bbbbbb;
-     display: block;
-     transition: all 0.3s ease;
-   }
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
 
-   .footer-col ul li a:hover{
-     color: #ffffff;
-     padding-left: 8px;
-   }
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
 
-   .footer-col .social-links a{
-     display: inline-block;
-     height: 40px;
-     width: 40px;
-     background-color: rgba(255,255,255,0.2);
-     margin:0 10px 10px 0;
-     text-align: center;
-     line-height: 40px;
-     border-radius: 50%;
-     color: #ffffff;
-     transition: all 0.5s ease;
-   }
-   
-   .footer-col .social-links a:hover{
-     color: #24262b;
-     background-color: #ffffff;
-   }
-   
-   .footer p {
-     color: white;
-     font-weight: bold;
-   }
-   
-   /*responsive*/
-   @media(max-width: 767px){
-     .footer-col{
-       width: 50%;
-       margin-bottom: 30px;
-   }
-   }
-   @media(max-width: 574px){
-     .footer-col{
-       width: 100%;
-   }
-   }
-   .cabeçalho {
-      position: relative; /* Adiciona posicionamento relativo ao contêiner */
-      overflow: hidden; /* Remove as bordas brancas da imagem */
-      text-align: center; /* Centraliza o texto horizontalmente */
-      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer p {
+      color: white;
+      font-weight: bold;
+    }
+
+    /*responsive*/
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+
+    .cabeçalho {
+      position: relative;
+      /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden;
+      /* Remove as bordas brancas da imagem */
+      text-align: center;
+      /* Centraliza o texto horizontalmente */
+      animation: fadeIn 1s ease-in-out;
+      /* Adiciona a animação de fadeIn */
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -235,20 +258,26 @@ nav ul li a:hover {
     .cabeçalho img {
       width: 100%;
       height: auto;
-      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
+      object-fit: cover;
+      /* Adiciona object-fit para cobrir toda a área do contêiner */
     }
 
     .cabeçalho h1 {
-      position: absolute; /* Adiciona posicionamento absoluto */
-      top: 20%; /* Move o elemento para o centro vertical */
-      left: 50%; /* Move o elemento para o centro horizontal */
-      transform: translate(-50%, -50%); /* Centraliza o elemento vertical e horizontalmente */
+      position: absolute;
+      /* Adiciona posicionamento absoluto */
+      top: 20%;
+      /* Move o elemento para o centro vertical */
+      left: 50%;
+      /* Move o elemento para o centro horizontal */
+      transform: translate(-50%, -50%);
+      /* Centraliza o elemento vertical e horizontalmente */
       color: #fff;
       font-weight: 400;
       text-transform: uppercase;
       font-size: clamp(1rem, 5vw, 5rem);
       font-family: "Cormorant Garamond", serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      /* Adiciona sombra ao texto */
       letter-spacing: 5px;
       text-align: left;
     }
@@ -265,7 +294,8 @@ nav ul li a:hover {
     }
 
     .cabeçalho p {
-      margin: 20px 0; /* Espaço acima do parágrafo */
+      margin: 20px 0;
+      /* Espaço acima do parágrafo */
     }
 
     .w3-row-padding img {
@@ -273,24 +303,30 @@ nav ul li a:hover {
     }
 
     ::-webkit-scrollbar {
-          width: 12px; /* Largura do scrollbar */
-        }
+      width: 12px;
+      /* Largura do scrollbar */
+    }
 
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1; /* Cor do fundo do scrollbar */
-        }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      /* Cor do fundo do scrollbar */
+    }
 
-        ::-webkit-scrollbar-thumb {
-          background-color: #888; /* Cor do botão de rolagem */
-          border-radius: 6px; /* Cantos arredondados do botão de rolagem */
-          border: 3px solid #f1f1f1; /* Borda do botão de rolagem */
-        }
+    ::-webkit-scrollbar-thumb {
+      background-color: #888;
+      /* Cor do botão de rolagem */
+      border-radius: 6px;
+      /* Cantos arredondados do botão de rolagem */
+      border: 3px solid #f1f1f1;
+      /* Borda do botão de rolagem */
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-          background-color: #555; /* Cor do botão de rolagem ao passar o mouse */
-        }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+      /* Cor do botão de rolagem ao passar o mouse */
+    }
 
-        .w3-third img {
+    .w3-third img {
       width: 100%;
       cursor: pointer;
       transition: transform 0.3s;
@@ -309,7 +345,7 @@ nav ul li a:hover {
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.9);
+      background-color: rgba(0, 0, 0, 0.9);
     }
 
     .modal-content {
@@ -342,9 +378,7 @@ nav ul li a:hover {
       color: orange;
       cursor: pointer;
     }
-
-
-</style>
+  </style>
 </head>
 
 <body>
@@ -353,11 +387,11 @@ nav ul li a:hover {
   </header>
   <nav>
     <ul>
-        <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
-        <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
-        <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
-        <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
-        <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
+      <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
+      <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
+      <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
+      <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
     </ul>
   </nav>
 
@@ -366,97 +400,101 @@ nav ul li a:hover {
     <img src="./imgs/fundofoto.png" alt="SBartender">
     <h1>Portfolio</h1>
     <div>
-      <p>Explore nossa galeria exclusiva e mergulhe no fascinante mundo do Smart Bartender através de imagens que capturam a essência e a magia por trás de cada coquetel. Deixe-se inspirar e descubra a arte única da coquetelaria visualizada em cada foto.</p>
+      <p>Explore nossa galeria exclusiva e mergulhe no fascinante mundo do Smart Bartender através de imagens que
+        capturam a essência e a magia por trás de cada coquetel. Deixe-se inspirar e descubra a arte única da
+        coquetelaria visualizada em cada foto.</p>
     </div>
   </div>
 
 
-  <h2 class="scroll-title" style="text-align: center; color: black; font-family: Playfair Display; letter-spacing: 5px; margin-top: 50px; font-size: 36px;">Fotografias</h2>
+  <h2 class="scroll-title"
+    style="text-align: center; color: black; font-family: Playfair Display; letter-spacing: 5px; margin-top: 50px; font-size: 36px;">
+    Fotografias</h2>
 
-<!-- Photo Grid -->
-<div class="w3-row-padding" id="myGrid" style="margin-bottom:128px; margin-top: 50px;">
-  <div class="w3-third">
-    <img src="./imgs/23.png" onclick="openModal('./imgs/23.png')" style="width:100%">
-    <img src="./imgs/2.png" onclick="openModal('./imgs/2.png')" style="width:100%">
-    <img src="./imgs/24.png" onclick="openModal('./imgs/24.png')" style="width:100%">
-    <img src="./imgs/23.png" onclick="openModal('./imgs/23.png')" style="width:100%">
-    <img src="./imgs/3.png" onclick="openModal('./imgs/3.png')" style="width:100%">
-    <img src="./imgs/5.png" onclick="openModal('./imgs/5.png')" style="width:100%">
+  <!-- Photo Grid -->
+  <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px; margin-top: 50px;">
+    <div class="w3-third">
+      <img src="./imgs/23.png" onclick="openModal('./imgs/23.png')" style="width:100%">
+      <img src="./imgs/2.png" onclick="openModal('./imgs/2.png')" style="width:100%">
+      <img src="./imgs/24.png" onclick="openModal('./imgs/24.png')" style="width:100%">
+      <img src="./imgs/23.png" onclick="openModal('./imgs/23.png')" style="width:100%">
+      <img src="./imgs/3.png" onclick="openModal('./imgs/3.png')" style="width:100%">
+      <img src="./imgs/5.png" onclick="openModal('./imgs/5.png')" style="width:100%">
+    </div>
+
+    <div class="w3-third">
+      <img src="./imgs/7.png" onclick="openModal('./imgs/7.png')" style="width:100%">
+      <img src="./imgs/26.png" onclick="openModal('./imgs/26.png')" style="width:100%">
+      <img src="./imgs/10.png" onclick="openModal('./imgs/10.png')" style="width:100%">
+      <img src="./imgs/9.png" onclick="openModal('./imgs/9.png')" style="width:100%">
+      <img src="./imgs/15.png" onclick="openModal('./imgs/15.png')" style="width:100%">
+      <img src="./imgs/12.png" onclick="openModal('./imgs/12.png')" style="width:100%">
+    </div>
+
+    <div class="w3-third">
+      <img src="./imgs/1.png" onclick="openModal('./imgs/1.png')" style="width:100%">
+      <img src="./imgs/6.png" onclick="openModal('./imgs/6.png')" style="width:100%">
+      <img src="./imgs/29.png" onclick="openModal('./imgs/29.png')" style="width:100%">
+      <img src="./imgs/30.png" onclick="openModal('./imgs/30.png')" style="width:100%">
+      <img src="./imgs/28.png" onclick="openModal('./imgs/28.png')" style="width:100%">
+      <img src="./imgs/17.png" onclick="openModal('./imgs/17.png')" style="width:100%">
+    </div>
   </div>
 
-  <div class="w3-third">
-    <img src="./imgs/7.png" onclick="openModal('./imgs/7.png')" style="width:100%">
-    <img src="./imgs/26.png" onclick="openModal('./imgs/26.png')" style="width:100%">
-    <img src="./imgs/10.png" onclick="openModal('./imgs/10.png')" style="width:100%">
-    <img src="./imgs/9.png" onclick="openModal('./imgs/9.png')" style="width:100%">
-    <img src="./imgs/15.png" onclick="openModal('./imgs/15.png')" style="width:100%">
-    <img src="./imgs/12.png" onclick="openModal('./imgs/12.png')" style="width:100%">
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+    </div>
   </div>
 
-  <div class="w3-third">
-    <img src="./imgs/1.png" onclick="openModal('./imgs/1.png')" style="width:100%">
-    <img src="./imgs/6.png" onclick="openModal('./imgs/6.png')" style="width:100%">
-    <img src="./imgs/29.png" onclick="openModal('./imgs/29.png')" style="width:100%">
-    <img src="./imgs/30.png" onclick="openModal('./imgs/30.png')" style="width:100%">
-    <img src="./imgs/28.png" onclick="openModal('./imgs/28.png')" style="width:100%">
-    <img src="./imgs/17.png" onclick="openModal('./imgs/17.png')" style="width:100%">
+
+  <!-- End Page Content -->
   </div>
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-    <img id="modalImage" src="" alt="">
-  </div>
-</div>
 
 
-<!-- End Page Content -->
-</div>
-  
-
-<footer class="footer">
-  <div class="containerfooter">
-    <div class="rowfooter">
-      <div class="footer-col">
-        <h4>Sobre o Smart Bartender</h4>
-        <ul>
-          <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
-          <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
-          <li><a href="projeto.html#equipa">Nossa equipa</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Ajuda</h4>
-        <ul>
-          <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
-          <li><a href="projeto.html#section1">Guia de Montagem</a></li>
-          <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
-          <li><a href="contactos.html">Opções de Apoio</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Recursos Avançados</h4>
-        <ul>
-          <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
-          <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
-          <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
-      </ul>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Siga-nos</h4>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          <p>2024 Smart Bartender</p>
+  <footer class="footer">
+    <div class="containerfooter">
+      <div class="rowfooter">
+        <div class="footer-col">
+          <h4>Sobre o Smart Bartender</h4>
+          <ul>
+            <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
+            <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
+            <li><a href="projeto.html#equipa">Nossa equipa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
+            <li><a href="projeto.html#section1">Guia de Montagem</a></li>
+            <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
+            <li><a href="contactos.html">Opções de Apoio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos Avançados</h4>
+          <ul>
+            <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
+            <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
+            <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
+          </ul>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            <p>2024 Smart Bartender</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
   <!-- Scripts -->
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -465,29 +503,31 @@ nav ul li a:hover {
 
 
     function openModal(imageSrc) {
-    document.getElementById("myModal").style.display = "block";
-    document.getElementById("modalImage").src = imageSrc;
-  }
+      document.getElementById("myModal").style.display = "block";
+      document.getElementById("modalImage").src = imageSrc;
+    }
 
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
 
-  // Adiciona um evento quando a página termina de carregar
-  document.addEventListener('DOMContentLoaded', function () {
-    // Inicializa o ScrollReveal
-    ScrollReveal().reveal('.scroll-title', { duration: 1000, origin: 'bottom', distance: '20px' });
-    ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
-    ScrollReveal().reveal('#myGrid', { duration: 1000, origin: 'bottom', distance: '20px' });
-    ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
-    ScrollReveal().reveal('.background-section', { duration: 1000, origin: 'bottom', distance: '20px' });
-    ScrollReveal().reveal('.w3-row-padding img', { duration: 1000, origin: 'bottom', distance: '20px' });
-    // Define a opacidade para 1 após o carregamento da página
-    document.body.style.opacity = 1;
-  });
-</script>
+    // Adiciona um evento quando a página termina de carregar
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializa o ScrollReveal
+      ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('#myGrid', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.background-section', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.w3-row-padding img', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('h1', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('.scroll-title', { duration: 1000, origin: 'bottom', distance: '20px' });
+      
+      // Define a opacidade para 1 após o carregamento da página
+      document.body.style.opacity = 1;
+    });
+  </script>
 
-  
+
 </body>
 
 </html>

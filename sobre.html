@@ -1,211 +1,238 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Smart Bartender</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Bartender</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" href="imgs\logo.png" type="image/png">
   <script src="https://unpkg.com/scrollreveal"></script>
-<style>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+      background-color: #f8f9fa;
 
-body {
-  font-family: "Times New Roman", Georgia, Serif;
-   background-color: #f8f9fa;
-   
-  }
-h1, h2, h3, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
+    }
 
-header {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
-}
+    h1,
+    h2,
+    h3,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
 
-.logo {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    cursor: pointer;
-}
+    header {
+      background-color: black;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    .logo {
+      width: 100px;
+      /* Ajuste a largura conforme necessário */
+      height: auto;
+      /* Mantém a proporção da imagem */
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-}
+    }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    
-}
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-nav ul li {
-    float: left;
-   
-}
+    }
 
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
+    nav ul li {
+      float: left;
 
-nav ul li a:hover {
-  color: #ff0; /* Cor ao passar o mouse */
-}
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #ff0;
+      /* Cor ao passar o mouse */
+    }
 
     @media screen and (max-width: 767px) {
       nav {
-      display: flex;
-      padding: 0px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
+        display: flex;
+        padding: 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .containercard {
+        margin: auto;
+        font-size: 30px;
+      }
+
+
     }
-    .containercard {
-      margin: auto;
-      font-size: 30px;
-} 
-
-
-}
 
     section {
-      position: relative; /* Adiciona posicionamento relativo ao contêiner */
-      overflow: hidden; /* Remove as bordas brancas da imagem */
-      text-align: center; /* Centraliza o texto horizontalmente */
-      
-      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+      position: relative;
+      /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden;
+      /* Remove as bordas brancas da imagem */
+      text-align: center;
+      /* Centraliza o texto horizontalmente */
+
+      animation: fadeIn 1s ease-in-out;
+      /* Adiciona a animação de fadeIn */
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
 
     }
-    
+
     section img {
       width: 100%;
       height: auto;
-      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
-     
+      object-fit: cover;
+      /* Adiciona object-fit para cobrir toda a área do contêiner */
+
     }
 
-    .containerfooter{
-     max-width: 1170px;
-     margin:auto;
+    .containerfooter {
+      max-width: 1170px;
+      margin: auto;
 
-   }
-   .rowfooter{
-     display: flex;
-     flex-wrap: wrap;
-   }
-   ul{
-     list-style: none;
-     margin-left: -40px;
-   }
-   .footer{
-     margin-top: 150px;
-     background-color: #24262b;
-       padding: 70px 0;
-   }
-   .footer-col{
+    }
+
+    .rowfooter {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: -40px;
+    }
+
+    .footer {
+      margin-top: 150px;
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
       width: 25%;
       padding: 0 15px;
-   }
-   .footer-col h4{
-     font-size: 18px;
-     color: #ffffff;
-     text-transform: capitalize;
-     margin-bottom: 35px;
-     font-weight: 500;
-     position: relative;
-   }
-   .footer-col h4::before{
-     content: '';
-     position: absolute;
-     left:0;
-     bottom: -10px;
-     background-color: #e91e63;
-     height: 2px;
-     box-sizing: border-box;
-     width: 50px;
-   }
-   .footer-col ul li:not(:last-child){
-     margin-bottom: 10px;
-   }
-   .footer-col ul li a{
-     font-size: 16px;
-     text-transform: capitalize;
-     color: #ffffff;
-     text-decoration: none;
-     font-weight: 300;
-     color: #bbbbbb;
-     display: block;
-     transition: all 0.3s ease;
-   }
-   .footer-col ul li a:hover{
-     color: #ffffff;
-     padding-left: 8px;
-   }
-   .footer-col .social-links a{
-     display: inline-block;
-     height: 40px;
-     width: 40px;
-     background-color: rgba(255,255,255,0.2);
-     margin:0 10px 10px 0;
-     text-align: center;
-     line-height: 40px;
-     border-radius: 50%;
-     color: #ffffff;
-     transition: all 0.5s ease;
-   }
-   .footer-col .social-links a:hover{
-     color: #24262b;
-     background-color: #ffffff;
-   }
-   
-   .footer p {
-     color: white;
-     font-weight: bold;
-   }
-   
-   /*responsive*/
-   @media(max-width: 767px){
-     .footer-col{
-       width: 50%;
-       margin-bottom: 30px;
-   }
-   }
-   
-   @media(max-width: 574px){
-     .footer-col{
-       width: 100%;
-   }
-   }
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer p {
+      color: white;
+      font-weight: bold;
+    }
+
+    /*responsive*/
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
 
     .container {
       padding-bottom: 100px;
@@ -214,6 +241,7 @@ nav ul li a:hover {
       align-items: center;
       flex-wrap: wrap;
     }
+
     .containercard {
       text-align: center;
     }
@@ -234,6 +262,7 @@ nav ul li a:hover {
       transition: all 0.5s ease-in-out;
       border-radius: 10px;
     }
+
     .card:hover {
       background-position: 80% 20%;
       transform: rotate3d(0.5, 1, 0, 20deg);
@@ -249,6 +278,7 @@ nav ul li a:hover {
       padding: 50px 25px 25px 25px;
       transform-style: preserve-3d;
     }
+
     .content-box .card-title {
       color: white;
       font-size: 25px;
@@ -256,9 +286,11 @@ nav ul li a:hover {
       transition: all 0.5s ease-in-out;
       transform: translate3d(0px, 0px, 20px);
     }
+
     .content-box .card-title:hover {
       transform: translate3d(0px, 0px, 50px);
     }
+
     .content-box .card-content {
       padding-top: 15px;
       font-size: 12px;
@@ -266,9 +298,11 @@ nav ul li a:hover {
       transition: all 0.5s ease-in-out;
       transform: translate3d(0px, 0px, 20px);
     }
+
     .content-box .card-content:hover {
       transform: translate3d(0px, 0px, 50px);
     }
+
     .content-box .see-more {
       display: block;
       font-weight: 900;
@@ -279,6 +313,7 @@ nav ul li a:hover {
       transition: all 0.5s ease-in-out;
       transform: translate3d(0px, 0px, 20px);
     }
+
     .content-box .see-more:hover {
       transform: translate3d(0px, 0px, 50px);
     }
@@ -304,200 +339,222 @@ nav ul li a:hover {
     }
 
     ::-webkit-scrollbar {
-          width: 12px; /* Largura do scrollbar */
-        }
+      width: 12px;
+      /* Largura do scrollbar */
+    }
 
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1; /* Cor do fundo do scrollbar */
-        }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      /* Cor do fundo do scrollbar */
+    }
 
-        ::-webkit-scrollbar-thumb {
-          background-color: #888; /* Cor do botão de rolagem */
-          border-radius: 6px; /* Cantos arredondados do botão de rolagem */
-          border: 3px solid #f1f1f1; /* Borda do botão de rolagem */
-        }
+    ::-webkit-scrollbar-thumb {
+      background-color: #888;
+      /* Cor do botão de rolagem */
+      border-radius: 6px;
+      /* Cantos arredondados do botão de rolagem */
+      border: 3px solid #f1f1f1;
+      /* Borda do botão de rolagem */
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-          background-color: #555; /* Cor do botão de rolagem ao passar o mouse */
-        }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+      /* Cor do botão de rolagem ao passar o mouse */
+    }
 
-    #about2, #specifications {
+    #about2,
+    #specifications {
       text-align: justify;
     }
 
-    @media(max-width: 767px){
-     .video {
-       width: 75%;
-   }
-   .cabeçalho div {
-      display: none;
+    @media(max-width: 767px) {
+      .video {
+        width: 75%;
+      }
+
+      .cabeçalho div {
+        display: none;
+      }
+
+      .container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: left;
+
+      }
+
     }
-
-   .container {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      justify-content: left;
-      
-   }
-
-   }
-    
-</style>
+  </style>
 
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-  <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logo">
-</header>
-<nav>
-  <ul>
+  <!-- Header -->
+  <header>
+    <img src="./imgs/logoheader.png" onclick="window.location.href='index.html'" alt="Logo" class="logo">
+  </header>
+  <nav>
+    <ul>
       <li><a href="./index.html"><i class="fa fa-home"></i> Inicio</a></li>
       <li><a href="./sobre.html"><i class="fa fa-info-circle"></i> Sobre</a></li>
       <li><a href="./fotos.html"><i class="fa fa-image"></i> Fotos</a></li>
       <li><a href="./projeto.html"><i class="fa fa-cogs"></i> Projeto</a></li>
       <li><a href="./contactos.html"><i class="fa fa-envelope"></i> Contactos</a></li>
-  </ul>
-</nav>
+    </ul>
+  </nav>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1100px">
 
-  <!-- Seção Sobre -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-      <img src="./imgs/13.png" alt="Smart Bartender" style="width: 100%; height: auto;">
+    <!-- Seção Sobre -->
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="./imgs/13.png" alt="Smart Bartender" style="width: 100%; height: auto;">
+      </div>
+
+      <div class="w3-col m6 w3-padding-large" id="about2">
+        <h1 class="w3-center">Projeto Smart Bartender</h1><br>
+        <h5 class="w3-center">Projeto Destaque</h5>
+        <p class="w3-large">Explore o projeto Smart Bartender, uma revolucionária combinação de mixologia e tecnologia.
+          Este projeto inovador traz uma nova dimensão à preparação de coquetéis, atendendo tanto aos entusiastas de
+          coquetéis quanto aos amantes da automação. Desenvolvido com a mais recente tecnologia e alimentado por
+          inteligência artificial, oferece uma fusão perfeita entre o mundo dos coquetéis e a tecnologia inteligente.
+        </p>
+
+      </div>
     </div>
 
-    <div class="w3-col m6 w3-padding-large" id="about2">
-      <h1 class="w3-center">Projeto Smart Bartender</h1><br>
-      <h5 class="w3-center">Projeto Destaque</h5>
-      <p class="w3-large">Explore o projeto Smart Bartender, uma revolucionária combinação de mixologia e tecnologia. Este projeto inovador traz uma nova dimensão à preparação de coquetéis, atendendo tanto aos entusiastas de coquetéis quanto aos amantes da automação. Desenvolvido com a mais recente tecnologia e alimentado por inteligência artificial, oferece uma fusão perfeita entre o mundo dos coquetéis e a tecnologia inteligente.</p>
-      
+    <hr>
+
+    <!-- Seção sobre esquerdo-->
+    <div class="w3-row w3-padding-64" id="specifications">
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">Tecnologia e a Arte dos Coquetéis</h1><br>
+        <p class="w3-large">Testemunhe a fusão impressionante entre inovação tecnológica e a tradição artesanal da
+          coquetelaria com o Smart Bartender. Este projeto extraordinário vai além da automação com sua abordagem
+          inteligente para criar, misturar e servir coquetéis. Ao integrar elementos avançados como Arduino, Raspberry
+          Pi, bombas peristálticas e relés de 8 canais, o Smart Bartender proporciona uma experiência única de
+          coquetelaria personalizada. O design elegante complementa qualquer ambiente e desvende o potencial da mistura
+          de bebidas com tecnologia de ponta, oferecendo não apenas coquetéis, mas uma experiência envolvente para os
+          apreciadores de bebidas mais exigentes.</p><br>
+      </div>
+
+      <div class="w3-col m6 w3-padding-large">
+        <img src="./imgs/15.png" alt="Especificações do Smart Bartender" style="width: 100%; height: auto;">
+      </div>
     </div>
+    <hr>
   </div>
 
+  <h1 class="containercard" style="margin-bottom: 50px;">Demonstração</h1>
+  <video class="video" controls>
+
+    <source src="./imgs/videoepico.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
   <hr>
 
-  <!-- Seção sobre esquerdo-->
-  <div class="w3-row w3-padding-64" id="specifications">
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Tecnologia e a Arte dos Coquetéis</h1><br>
-      <p class="w3-large">Testemunhe a fusão impressionante entre inovação tecnológica e a tradição artesanal da coquetelaria com o Smart Bartender. Este projeto extraordinário vai além da automação com sua abordagem inteligente para criar, misturar e servir coquetéis. Ao integrar elementos avançados como Arduino, Raspberry Pi, bombas peristálticas e relés de 8 canais, o Smart Bartender proporciona uma experiência única de coquetelaria personalizada. O design elegante complementa qualquer ambiente e desvende o potencial da mistura de bebidas com tecnologia de ponta, oferecendo não apenas coquetéis, mas uma experiência envolvente para os apreciadores de bebidas mais exigentes.</p><br>
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <img src="./imgs/15.png" alt="Especificações do Smart Bartender" style="width: 100%; height: auto;">
-    </div>
-  </div>
-  <hr>
-</div>
-
-<h1 class="containercard" style="margin-bottom: 50px;">Demonstração</h1>
-<video class="video" controls>
-
-  <source src="./imgs/videoepico.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-<hr>
-
-<h1 class="containercard">Especificações do Smart Bartender</h1>
-<div class="container">
-  <div class="parent card2">
+  <h1 class="containercard">Especificações do Smart Bartender</h1>
+  <div class="container">
+    <div class="parent card2">
       <div class="card ">
-          <div class="content-box">
-              <h1 class="card-title">Variedade Bebidas</h1>
-              <p class="card-content">
-                Crie coquetéis personalizados com facilidade e surpreenda-se com a variedade de bebidas oferecidas pelo Smart Bartender.
-              </p>
-          </div>
-      </div>
-  </div>
-
-  <div class="parent card3">
-      <div class="card">
-          <div class="content-box">
-              <h1 class="card-title">Inteligente e Intuitivo</h1>
-              <p class="card-content">
-                Desfrute de coquetelaria moderna com o Smart Bartender. Controle intuitivo, escolha fácil e preparo inteligente para uma experiência única.
-              </p>
-          </div>
-      </div>
-  </div>
-
-  <div class="parent card4">
-    <div class="card">
         <div class="content-box">
-            <h1 class="card-title">Elegante Funcional</h1>
-            <p class="card-content">
-              Combinação perfeita de tecnologia e estilo, o Smart Bartender destaca-se com seu design elegante e funcionalidade impressionante.
-            </p>
+          <h1 class="card-title">Variedade Bebidas</h1>
+          <p class="card-content">
+            Crie coquetéis personalizados com facilidade e surpreenda-se com a variedade de bebidas oferecidas pelo
+            Smart Bartender.
+          </p>
         </div>
+      </div>
     </div>
-</div>
-<div class="parent card5">
-  <div class="card">
-      <div class="content-box">
+
+    <div class="parent card3">
+      <div class="card">
+        <div class="content-box">
+          <h1 class="card-title">Inteligente e Intuitivo</h1>
+          <p class="card-content">
+            Desfrute de coquetelaria moderna com o Smart Bartender. Controle intuitivo, escolha fácil e preparo
+            inteligente para uma experiência única.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent card4">
+      <div class="card">
+        <div class="content-box">
+          <h1 class="card-title">Elegante Funcional</h1>
+          <p class="card-content">
+            Combinação perfeita de tecnologia e estilo, o Smart Bartender destaca-se com seu design elegante e
+            funcionalidade impressionante.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="parent card5">
+      <div class="card">
+        <div class="content-box">
           <h1 class="card-title">Diversão Garantido</h1>
           <p class="card-content">
-            Do casual ao sofisticado, o Smart Bartender eleva o entretenimento com coquetéis personalizados para todas as ocasiões.
+            Do casual ao sofisticado, o Smart Bartender eleva o entretenimento com coquetéis personalizados para todas
+            as ocasiões.
           </p>
-      </div>
-  </div>
-</div>
-</div>    
-
-
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="containerfooter">
-    <div class="rowfooter">
-      <div class="footer-col">
-        <h4>Sobre o Smart Bartender</h4>
-        <ul>
-          <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
-          <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
-          <li><a href="projeto.html#equipa">Nossa equipa</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Ajuda</h4>
-        <ul>
-          <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
-          <li><a href="projeto.html#section1">Guia de Montagem</a></li>
-          <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
-          <li><a href="contactos.html">Opções de Apoio</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Recursos Avançados</h4>
-        <ul>
-          <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
-          <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
-          <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
-      </ul>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Siga-nos</h4>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          <p>2024 Smart Bartender</p>
         </div>
       </div>
     </div>
   </div>
-</footer>
-<!-- Scripts -->
-  
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="containerfooter">
+      <div class="rowfooter">
+        <div class="footer-col">
+          <h4>Sobre o Smart Bartender</h4>
+          <ul>
+            <li><a href="sobre.html">Saiba mais sobre nosso projeto</a></li>
+            <li><a href="sobre.html#specifications">Funcionalidades inteligentes</a></li>
+            <li><a href="projeto.html#equipa">Nossa equipa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="contactos.html#faq">Perguntas Frequentes</a></li>
+            <li><a href="projeto.html#section1">Guia de Montagem</a></li>
+            <li><a href="https://dinisleal8s-team.monday.com/">Status do Projeto</a></li>
+            <li><a href="contactos.html">Opções de Apoio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos Avançados</h4>
+          <ul>
+            <li><a href="projeto.html#section8">Controles Inteligentes</a></li>
+            <li><a href="projeto.html#section">Bebidas prefeitas</a></li>
+            <li><a href="projeto.html#section11">Conectividade Inteligente</a></li>
+          </ul>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://pt.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            <p>2024 Smart Bartender</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
 
     // Adiciona um evento quando a página termina de carregar
     document.addEventListener('DOMContentLoaded', function () {
@@ -515,4 +572,5 @@ Your browser does not support the video tag.
   </script>
 
 </body>
+
 </html>
